@@ -1,0 +1,59 @@
+### PIXMAP MENUBAR ###
+style "pixbuf-menubar"		
+
+{
+	xthickness			= 1
+	ythickness			= 2
+	text[NORMAL]			= @selected_fg_color # Fix Openoffice menubar
+	
+	engine "pixmap"
+	{
+		image
+		{
+			function    = BOX
+			state       = NORMAL
+			file        = "Bars/menubar.png"
+			border      = { 0, 0, 0, 2 }
+			stretch     = TRUE
+		}
+
+		image
+		{
+			function    = BOX
+			state       = ACTIVE
+			file        = "Bars/menubar.png"
+			border      = { 0, 0, 0, 2 }
+			stretch     = TRUE
+		}
+
+		image
+		{
+			function    = BOX
+			state       = INSENSITIVE
+			file        = "Bars/menubar.png"
+			border      = { 0, 0, 0, 2 }
+			stretch     = TRUE
+		}
+	}
+}
+
+style "menubar-menuitem" 
+{
+	bg[PRELIGHT]   = @selected_bg_color
+	bg[SELECTED]   = @selected_bg_color
+	fg[NORMAL]     = @selected_fg_color
+	fg[PRELIGHT]   = @selected_fg_color
+	fg[SELECTED]   = @selected_fg_color
+	text[NORMAL]   = @base_color
+	text[PRELIGHT] = @selected_fg_color
+	text[SELECTED] = @selected_fg_color
+}
+
+style "menubar-menuitem-prelight"
+{
+	fg[PRELIGHT] = @selected_fg_color
+}
+
+widget_class "*<GtkMenuBar>.<GtkMenuItem>*" style "menubar-menuitem"
+widget_class "*<GtkMenuItem>*" style "menubar-menuitem-prelight"
+widget_class "*<GtkMenuBar>*" style "pixbuf-menubar"

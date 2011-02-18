@@ -1,0 +1,13 @@
+# Bluebird xfwm theme by Simon Steinbeiß and Pasi Lallinaho
+# based on the Axiom xfwm theme by Rogier Koppejan.
+
+active_text_color=#F1F1F1
+button_offset=3
+button_spacing=4
+full_width_title=true
+inactive_text_color=#93ADC9
+maximized_offset=2
+show_app_icon=false
+title_horizontal_offset=0
+title_vertical_offset_active=1
+title_vertical_offset_inactive=1
