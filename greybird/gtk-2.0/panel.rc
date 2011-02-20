@@ -44,8 +44,8 @@ style "panel-entry"
 {
 	fg[NORMAL]	= @text_color
 	fg[PRELIGHT]	= @text_color
-	fg[ACTIVE]	= @text_color
-	
+	fg[ACTIVE]	= @text_color	
+
 	text[NORMAL]   = @text_color
 	text[PRELIGHT] = @text_color
 	text[ACTIVE]   = @text_color
@@ -81,6 +81,7 @@ widget_class "*Notif*Brasero*"      style "theme-panel"
 # XFCE panel theming.
 widget "*Xfce*Panel*"               style "theme-panel"
 class "*Xfce*Panel*"                style "theme-panel"
+class "*SexyIconEntry*"		    style:highest "panel-entry"
 
 # Make sure panel text color doesn't change
 widget_class "*Panel*MenuBar*"      style "theme-main-menu-text"
