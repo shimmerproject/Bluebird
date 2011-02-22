@@ -519,6 +519,8 @@ widget_class "*<GtkMenuBar>.<GtkMenuItem>*" style "menubar-menuitem"
 widget_class "*<GtkMenuItem>*" style "menubar-menuitem-prelight"
 widget_class "*<GtkMenu>*"              style "murrine-menu"
 widget_class "*<GtkMenuBar>*"		style "murrine-menu"
+# Scale widget in menus (e.g. ubuntu's sound indicator)
+widget_class "*<GtkMenuItem>.*.<GtkScale>" style "murrine-scale"
 
 widget_class "*.<GtkFrame>.<GtkLabel>" style "murrine-frame-title"
 widget_class "*.<GtkTreeView>*"        style "murrine-treeview"
