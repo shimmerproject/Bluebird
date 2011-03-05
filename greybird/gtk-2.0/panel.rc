@@ -72,6 +72,7 @@ widget_class "*tray*"               style "theme-panel"
 widget_class "*computertemp*"       style "theme-panel"
 widget_class "*Applet*Tomboy*"      style "theme-panel"
 widget_class "*Applet*Netstatus*"   style "theme-panel"
+widget_class "*DbusmenuGtkMenu*"    style "theme-panel" # dark background for ayatana-indicators
 class "GtkEntry"		    style "panel-entry"
 
 # Fixes for tooltip text in some apps.
