@@ -9,13 +9,12 @@ gtk_color_scheme	= "tooltip_bg_color:#000000\ntooltip_fg_color:#E1E1E1" # Toolti
 gtk_color_scheme	= "link_color:#08c" # Hyperlinks
 gtk_color_scheme	= "panel_bg:#686868" # Panel bg color
 gtk_color_scheme	= "fm_color:#F7F7F7" # Color used in Nautilus and Thunar.
+gtk_color_scheme	= "bg_color_dark:#686868\ntext_color_dark:#FFF"
 
 gtk-icon-sizes		= "panel-menu=16,16:panel=16,16:gtk-button=16,16"			# Set icon size for button without text
 gtk-button-images	= 0					# Disables icons for buttons with text
 gtk-toolbar-style	= 0					# Disables text in toolbar
 gtk-auto-mnemonics	= 1					# Disables ugly lines under menu items
-
-include "panel.rc"	# This includes the file that handles panel theming.
 
 ####################
 ## Default Styles ##
@@ -188,18 +187,39 @@ style "evolution-hack" = "murrine-default" # Hacks for Evolution Mail.
 }
 
 style "murrine-dark" {
+	
+	GtkMenuBar	:: shadow-type		= GTK_SHADOW_NONE
+	
+	bg[NORMAL]	= @bg_color_dark
+	bg[ACTIVE]	= shade (0.7, @bg_color_dark)
+	bg[PRELIGHT]	= shade (0.7, @bg_color_dark)
+	bg[SELECTED]	= shade (0.6, @bg_color_dark)
+	
+	fg[NORMAL]	= @text_color_dark
+	fg[PRELIGHT]	= @text_color_dark
+	fg[ACTIVE]	= @text_color_dark
+	fg[SELECTED]	= @text_color_dark
+	
+	text[NORMAL]   = @text_color_dark
+	text[PRELIGHT] = @text_color_dark
+	text[ACTIVE]   = @text_color_dark
+	text[SELECTED]   = @text_color_dark
+	
+	engine "murrine" 
+	{
+		roundness = 0 # Roundness of menu items.
+	}
+}
+
+style "murrine-wide-dark" = "murrine-dark"
+{
+	ythickness        = 2
+	xthickness        = 4
+}
+
+style "tabwin-dark" = "murrine-dark" {
 	bg[NORMAL]	= "#646e7b"
-#	bg[ACTIVE]	= "#091720"
-#	bg[PRELIGHT]	= "#424b58"
 	bg[SELECTED]	= "#75808f"
-	
-	fg[NORMAL]	= @selected_fg_color
-	fg[PRELIGHT]	= "#ffffff"
-	fg[ACTIVE]	= @selected_fg_color
-	
-	text[NORMAL]   = @selected_fg_color
-	text[PRELIGHT] = "#ffffff"
-	text[ACTIVE]   = @selected_fg_color
 }
 
 style "murrine-wide"
@@ -262,8 +282,8 @@ style "murrine-notebook"
 
 style "murrine-menu"
 {
-	ythickness        = 2
-	xthickness        = 0
+	#ythickness        = 2
+	#xthickness        = 4
 	GtkMenuBar	:: shadow-type		= GTK_SHADOW_NONE
 	
 	bg[SELECTED]      = shade (0.85, @selected_bg_color)
@@ -286,11 +306,19 @@ style "murrine-menu"
 	engine "murrine" 
 	{
 		roundness = 0 # Roundness of menu items.
+		contrast = 0.9
 	}
 }
 
-style "menubar-menuitem" 
+
+style "murrine-menubar" = "murrine-menu" {
+	bg[SELECTED]	= shade (0.7, @bg_color_dark)
+}
+
+style "menubar-menuitem"
 {
+	#ythickness        = 2
+	#xthickness        = 4
 	bg[PRELIGHT]   = @selected_bg_color
 	bg[SELECTED]   = @selected_bg_color
 	fg[NORMAL]     = @selected_fg_color
@@ -428,7 +456,6 @@ style "murrine-scale" = "murrine-button"
 	
 	engine "murrine"
 	{
-
 		roundness 		= 5
 		border_shades		= { 1.0, 1.0 }
 		contrast		= 0.5
@@ -439,6 +466,19 @@ style "murrine-scale" = "murrine-button"
 		gradient_shades		= {1.0,1.0,1.0,1.0}
 		border_shades		= { 1.0, 1.0 }
 		shadow_shades		= { 0.5, 0.5 }
+	}
+}
+
+style "murrine-scale-dark" = "murrine-scale"
+{
+	bg[ACTIVE]				= @panel_bg
+	bg[NORMAL]				= @text_color_dark
+	bg[PRELIGHT]				= shade (0.5, @panel_bg)
+	bg[INSENSITIVE]				= @text_color_dark
+	bg[SELECTED]				= @text_color_dark
+	engine "murrine"
+	{
+		roundness 		= 5
 	}
 }
 
@@ -516,7 +556,7 @@ widget_class "*<GtkComboBoxEntry>*" style "murrine-comboboxentry"
 widget_class "*<GtkCombo>*"         style "murrine-comboboxentry"
 
 widget_class "*<GtkMenuBar>.<GtkMenuItem>*" style "menubar-menuitem"
-widget_class "*<GtkMenuItem>*" style "menubar-menuitem-prelight"
+#widget_class "*<GtkMenuItem>*" style "menubar-menuitem-prelight"
 widget_class "*<GtkMenu>*"              style "murrine-menu"
 widget_class "*<GtkMenuBar>*"		style "murrine-menu"
 # Scale widget in menus (e.g. ubuntu's sound indicator)
@@ -605,7 +645,7 @@ widget_class "*<GtkListItem>*" style "murrine-fg-is-text-color-workaround"
 widget_class "*<GtkCList>" style "murrine-fg-is-text-color-workaround"
 widget_class "*<EelEditableLabel>" style "murrine-fg-is-text-color-workaround"
 
-widget "xfwm4-tabwin*" style "murrine-dark"
+widget "xfwm4-tabwin*" style "tabwin-dark"
 
 
 # Google Chrome/Chromium theming (requires 9.0.597 or newer)
@@ -624,3 +664,6 @@ style "chrome-gtk-frame"
 }
 
 class "ChromeGtkFrame" style "chrome-gtk-frame"
+
+include "panel.rc"	# This includes the file that handles panel theming.
+include "terminal.rc"
