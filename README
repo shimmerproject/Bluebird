@@ -2,17 +2,11 @@ Name: Bluebird
 Summary: Desktop Suite for Xfce.
 URL: http://shimmerproject.org/projects/bluebird/
 
-Desktop Suite for Xfce. This repository contains the original Bluebird, as well as any color variations, like Greybird.
+Desktop Suite for Xfce.
 Bluebird is the default theme in Xubuntu 10.10.
-The recolored and improved Greybird is the default theme in Xubuntu 11.04.
 
 The Bluebird desktop suite includes:
 – GTK+ theme
 – xfwm theme
 – Wallpaper with Xubuntu branding and without, as well as the SVG source
 – elementaryXubuntu-dark, which is to supplement the elementary icon theme by Daniel Foré.
-
-The Greybird desktop suite includes:
-– GTK+ theme
-– xfwm theme
-– xfce-notify theme
