@@ -399,8 +399,10 @@ style "murrine-progressbar"
 	
 style "murrine-scrollbar"
 {
+	bg[ACTIVE]	= @base_color
 	bg[PRELIGHT]	= @panel_bg
 	bg[NORMAL]	= shade (1.4, @panel_bg)
+	bg[SELECTED]	= @base_color
 	
 	engine "murrine" {
 		arrowstyle		= 1
