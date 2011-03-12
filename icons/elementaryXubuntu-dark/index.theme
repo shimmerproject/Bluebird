@@ -6,7 +6,7 @@ Inherits=elementary-mono-dark,elementary
 Example=directory-x-normal
 
 #Directory list
-Directories=actions/16,actions/24,apps/16,apps/24,apps/48,apps/64,devices/48,panel/22,
+Directories=actions/16,actions/24,apps/16,apps/24,apps/48,apps/64,devices/48,notifications/48,panel/22,
 
 [actions/16]
 Size=16
@@ -41,6 +41,11 @@ Type=Fixed
 [devices/48]
 Size=48
 Context=Devices
+Type=Fixed
+
+[notifications/48]
+Size=48
+Context=Status
 Type=Fixed
 
 [panel/22]

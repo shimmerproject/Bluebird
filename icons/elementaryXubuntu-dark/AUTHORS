@@ -1,8 +1,13 @@
 ####################
 ABOUT:             #
 ####################
-elementary Xubuntu dark is based on elementary-mono-dark, it just adds some missing icons and symlinks for Xfce. (Simon Steinbeiß <simon.steinbeiss@shimmerproject.org>)
+"elementary Xubuntu" dark is based mainly on elementary-mono-dark, it just adds some missing icons and symlinks for Xfce. This addon to the elementary icon-theme was done by Simon Steinbeiß <ochosi@shimmerproject.org> for Xubuntu 11.04.
 
+Additional icons used for sound-notifications were taken from Ubuntu's Notify-OSD icon-theme, which was designed by Kenneth Wimer (copyright notice below).
+
+####################
+ELEMENTARY:	   #
+####################
 elementary is designed and developed by Daniel Foré <Daniel.p.Fore@gmail.com>
 
 GNOME icons, Humanity icons, and elementary icons are all licensed under the GPL.
@@ -22,7 +27,20 @@ Icons based on Humanity sources or taken from the elementary project are license
 		http://launchpad.net/humanity
 
 ####################
-Special Thanks:    #
+NOTIFY-OSD:        #
 ####################
+Upstream Author: 
+        Kenneth Wimer <kwwii@ubuntu.com>  Wed, 16 Sep 2009 16:15:50 +0200
 
-The awesome Humanity team for their hard work!
+Copyright: 
+	© 2004-2009 Canonical Ltd.
+	
+	http://www.ubuntu.com/ubuntu/TrademarkPolicy
+
+License: 
+
+Unless otherwise indicated, artwork is available under the Creative Commons
+Attribution Share-alike license v3.0 or any later version.  To view a copy of
+this license, visit http://creativecommons.org/licenses/by-sa/3.0/ or send a
+letter to Creative Commons, 171 Second Street, Suite 300, San Francisco,
+California, 94105, USA.
