@@ -335,7 +335,7 @@
      inkscape:pageshadow="2"
      inkscape:zoom="12.74"
      inkscape:cx="23.899313"
-     inkscape:cy="18.875981"
+     inkscape:cy="28.295133"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -354,7 +354,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -381,30 +381,6 @@
        y="1013.3622"
        rx="4.7135305"
        ry="4.4285717" />
-    <g
-       transform="translate(-34.296044,987.55857)"
-       id="g4155">
-      <path
-         d="M 12.000001,1.5 C 6.206464,1.5 1.4999998,6.206462 1.4999998,12 c 0,5.793538 4.7064641,10.500001 10.5000012,10.5 C 17.793536,22.5 22.500005,17.793538 22.5,12 22.5,6.206462 17.793536,1.5 12.000001,1.5 z"
-         id="path2555-7"
-         style="color:#000000;fill:url(#radialGradient4311);fill-opacity:1;fill-rule:nonzero;stroke:url(#linearGradient4313);stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
-         inkscape:connector-curvature="0" />
-      <path
-         d="M 21.5,11.999663 C 21.5,17.246537 17.246391,21.5 12.000121,21.5 6.7533684,21.5 2.5,17.246489 2.5,11.999663 c 0,-5.24663 4.2533684,-9.499662 9.500121,-9.499662 5.24627,0 9.499879,4.253032 9.499879,9.499662 l 0,0 z"
-         id="path8655-6"
-         style="opacity:0.5;color:#000000;fill:none;stroke:url(#linearGradient4315);stroke-width:0.99999988;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
-         inkscape:connector-curvature="0" />
-      <path
-         d="m 9,10.851312 c 0.133856,0.363882 0.284521,0.658836 0.605452,0.255527 0.397883,-0.236731 1.731043,-1.274394 1.597644,-0.257979 -0.426877,1.880812 -0.946481,3.741845 -1.3437772,5.628452 -0.4154287,1.033002 0.5279302,1.967395 1.5128652,1.295629 1.046924,-0.431584 1.947798,-1.134561 2.868143,-1.779436 -0.125575,-0.307965 -0.209273,-0.750354 -0.556249,-0.347606 -0.455597,0.20679 -1.450673,1.181728 -1.635539,0.377622 0.382698,-2.03658 1.09175,-3.99777 1.544989,-6.018111 C 14.010625,9.076461 13.329423,7.902701 12.309742,8.671139 11.088138,9.203187 10.066557,10.07231 9,10.851312 z m 4.533765,-6.849716 c -1.246397,-0.06614 -1.898056,1.943081 -0.713613,2.492896 0.96093,0.394087 2.00721,-0.59147 1.772459,-1.576267 -0.07285,-0.512793 -0.533242,-0.933879 -1.058845,-0.916629 l -10e-7,0 z"
-         id="text3482"
-         style="font-size:40px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:100%;writing-mode:lr-tb;text-anchor:start;fill:url(#linearGradient4317);fill-opacity:1;stroke:none;font-family:URW Palladio L;-inkscape-font-specification:URW Palladio L Bold"
-         inkscape:connector-curvature="0" />
-      <path
-         d="m 9,11.851312 c 0.133856,0.363882 0.284521,0.658836 0.605452,0.255527 0.397883,-0.236731 1.731043,-1.274393 1.597644,-0.257979 -0.426877,1.880812 -0.946481,3.741845 -1.3437772,5.628452 -0.4154287,1.033002 0.5279302,1.967395 1.5128652,1.295629 1.046924,-0.431584 1.947798,-1.134561 2.868143,-1.779436 -0.125575,-0.307965 -0.209273,-0.750354 -0.556249,-0.347606 -0.455597,0.20679 -1.450673,1.181728 -1.635539,0.377622 0.382698,-2.03658 1.09175,-3.99777 1.544989,-6.018111 C 14.010625,10.076462 13.329423,8.902701 12.309742,9.671139 11.088138,10.203188 10.066557,11.07231 9,11.851312 z m 4.533765,-6.849716 c -1.246397,-0.06614 -1.898056,1.943081 -0.713613,2.492896 0.96093,0.394086 2.00721,-0.59147 1.772459,-1.576267 -0.07285,-0.512793 -0.533242,-0.933879 -1.058845,-0.916629 l -10e-7,0 z"
-         id="path3536"
-         style="font-size:40px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:100%;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none;font-family:URW Palladio L;-inkscape-font-specification:URW Palladio L Bold"
-         inkscape:connector-curvature="0" />
-    </g>
     <path
        sodipodi:nodetypes="cccc"
        inkscape:connector-curvature="0"
