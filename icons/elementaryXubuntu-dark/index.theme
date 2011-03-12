@@ -1,12 +1,12 @@
 [Icon Theme]
 Name=elementary Xubuntu dark
 Comment=elementary for Xubuntu with bright panel icons
-Inherits=elementary
+Inherits=elementary-mono-dark,elementary
 
 Example=directory-x-normal
 
 #Directory list
-Directories=actions/16,actions/24,actions/48,apps/48,devices/48,panel/16,panel/22,
+Directories=actions/16,actions/24,apps/48,devices/48,panel/22,
 
 [actions/16]
 Size=16
@@ -18,11 +18,6 @@ Size=24
 Context=Actions
 Type=Fixed
 
-[actions/48]
-Size=48
-Context=Actions
-Type=Fixed
-
 [apps/48]
 Size=48
 Context=Applications
@@ -31,11 +26,6 @@ Type=Fixed
 [devices/48]
 Size=48
 Context=Devices
-Type=Fixed
-
-[panel/16]
-Size=16
-Context=Status
 Type=Fixed
 
 [panel/22]
