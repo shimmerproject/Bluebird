@@ -73,7 +73,7 @@ Size=128
 Context=Status
 Type=Fixed
 
-[places/48]
+[status/48]
 Size=48
 Context=Status
 Type=Fixed
