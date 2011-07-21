@@ -1,0 +1,481 @@
+<?xml version="1.0"?>
+<metacity_theme>
+<!-- NOTE: this theme implementation differs slightly from the original as it has slimmer borders (1px instead of original 2px)
+           in dialog windows. If you wish to revert to the original style, please follow instructions at the bottom of this file. -->
+
+<info>
+    <name>Bluebird</name>
+    <author>Oleg Olegovich</author>
+    <date>23 March 2011</date>
+    <copyright>Shimmer Project, 2011</copyright>
+    <description>A port of Bluebird xfwm4 theme from the Shimmer project (http://shimmerproject.org/projects/bluebird/).</description>
+</info>
+
+<!-- You can change the following constants rather freely to modify the theme appearance. -->
+
+<!-- If value of TitleCentered is 1, then title will be centered, if it is 0, it will be left-aligned.
+     Please *do not specify* other values, such as TRUE etc. -->
+<constant name="TitleCentered" value="1"/>
+<!-- Padding between title and the left button if TitleCentered is 0, ignored if TitleCentered is 1. -->
+<constant name="TitleLeftPadding" value="8"/>
+
+<!-- Padding on top and bottom of window buttons (titlebar height is ButtonSize + 2*ButtonBorder) -->
+<constant name="ButtonBorder" value="4"/>
+<!-- Padding on top and bottom of utility window buttons -->
+<constant name="ButtonBorderUtility" value="1"/>
+<!-- Padding on left and right of window buttons (note that *real* spacing between two buttons is 2*ButtonSpacing) -->
+<constant name="ButtonSpacing" value="1"/>
+
+<!-- Color of title of focused windows -->
+<constant name="FocusedTitleColor" value="#F1F1F1"/>
+<!-- Color of title of unfocused windows -->
+<constant name="UnfocusedTitleColor" value="#93ADC9"/>
+
+<!-- Color of outer part of border of all windows -->
+<constant name="OuterBevel" value="#385B80"/>
+<!-- Color of inner part of border of focused normal windows -->
+<constant name="InnerBevelFocused" value="#5F9BD9"/>
+<!-- Color of inner part of border of unfocused normal windows -->
+<constant name="InnerBevelUnfocused" value="#4E7AA7"/>
+
+<constant name="TitleTopFocused" value="#5C88B7"/>
+<constant name="TitleBottomFocused" value="#4E7AA9"/>
+
+<constant name="TopOuterBevelUnfocused" value="#67829E"/>
+<constant name="TitleTopUnfocused" value="#7294B7"/>
+<constant name="TitleBottomUnfocused" value="#4E7AA7"/>
+
+<frame_geometry name="normal" rounded_top_left="1" rounded_top_right="1">
+  <distance name="left_width" value="2"/>
+  <distance name="right_width" value="2"/>
+  <distance name="bottom_height" value="2"/>
+  <!-- This padding is required only for buttons -->
+  <distance name="left_titlebar_edge" value="4"/>
+  <distance name="right_titlebar_edge" value="4"/>
+  <distance name="button_width" value="16"/>
+  <distance name="button_height" value="16"/>
+  <distance name="title_vertical_pad" value="0"/>
+  <border name="title_border" left="0" right="0" top="0" bottom="0"/>
+  <border name="button_border" left="ButtonSpacing" right="ButtonSpacing" top="ButtonBorder" bottom="ButtonBorder"/>
+</frame_geometry>
+
+<frame_geometry name="maximized" rounded_top_left="0" rounded_top_right="0" parent="normal">
+  <distance name="left_width" value="0"/>
+  <distance name="right_width" value="0"/>
+  <distance name="bottom_height" value="0"/>
+</frame_geometry>
+
+<frame_geometry name="dialog" rounded_top_left="1" rounded_top_right="1" parent="normal">
+  <distance name="left_width" value="1"/>
+  <distance name="right_width" value="1"/>
+  <distance name="bottom_height" value="1"/>
+</frame_geometry>
+
+<frame_geometry name="utility" title_scale="small" rounded_top_left="1" rounded_top_right="1" parent="dialog">
+  <distance name="left_titlebar_edge" value="0"/>
+  <distance name="right_titlebar_edge" value="0"/>
+  <border name="button_border" left="ButtonSpacing" right="ButtonSpacing" top="ButtonBorderUtility" bottom="ButtonBorderUtility"/>
+</frame_geometry>
+
+<frame_geometry name="border" has_title="false" rounded_top_left="0" rounded_top_right="0" parent="dialog">
+  <distance name="left_titlebar_edge" value="0"/>
+  <distance name="right_titlebar_edge" value="0"/>
+  <distance name="button_width" value="0"/>
+  <distance name="button_height" value="0"/>
+  <distance name="title_vertical_pad" value="1"/>
+  <border name="button_border" left="0" right="0" top="0" bottom="0"/>
+</frame_geometry>
+
+<!-- Title text -->
+
+<draw_ops name="title_focused">
+  <title color="FocusedTitleColor" x="TitleCentered*((width-title_width)/2 `max` 0) + (1-TitleCentered)*TitleLeftPadding"
+  	    y="1 + ((height - title_height)/2 `max` 0)"/>
+</draw_ops>
+
+<draw_ops name="title_unfocused">
+  <title color="UnfocusedTitleColor"  x="TitleCentered*((width-title_width)/2 `max` 0) + (1-TitleCentered)*TitleLeftPadding"
+        y="1 + ((height - title_height)/2 `max` 0)"/>
+</draw_ops>
+
+<!-- Buttons -->
+
+<draw_ops name="close_button_focused">
+  <image filename="close-active.xpm" x="1" y="1" width="object_width" height="object_height"/>
+</draw_ops>
+
+<draw_ops name="close_button_prelight">
+  <image filename="close-prelight.xpm" x="1" y="1" width="object_width" height="object_height"/>
+</draw_ops>
+
+<draw_ops name="close_button_pressed">
+  <image filename="close-pressed.xpm" x="1" y="1" width="object_width" height="object_height"/>
+</draw_ops>
+
+<draw_ops name="close_button_unfocused">
+  <image filename="close-inactive.xpm" x="1" y="1" width="object_width" height="object_height"/>
+</draw_ops>
+
+<draw_ops name="minimize_button_focused">
+  <image filename="hide-active.xpm" x="1" y="1" width="object_width" height="object_height"/>
+</draw_ops>
+
+<draw_ops name="minimize_button_prelight">
+  <image filename="hide-prelight.xpm" x="1" y="1" width="object_width" height="object_height"/>
+</draw_ops>
+
+<draw_ops name="minimize_button_pressed">
+  <image filename="hide-pressed.xpm" x="1" y="1" width="object_width" height="object_height"/>
+</draw_ops>
+
+<draw_ops name="minimize_button_unfocused">
+  <image filename="hide-inactive.xpm" x="1" y="1" width="object_width" height="object_height"/>
+</draw_ops>
+
+<draw_ops name="maximize_button_focused">
+  <image filename="maximize-active.xpm" x="1" y="1" width="object_width" height="object_height"/>
+</draw_ops>
+
+<draw_ops name="maximize_button_prelight">
+  <image filename="maximize-prelight.xpm" x="1" y="1" width="object_width" height="object_height"/>
+</draw_ops>
+
+<draw_ops name="maximize_button_pressed">
+  <image filename="maximize-pressed.xpm" x="1" y="1" width="object_width" height="object_height"/>
+</draw_ops>
+
+<draw_ops name="maximize_button_unfocused">
+  <image filename="maximize-inactive.xpm" x="1" y="1" width="object_width" height="object_height"/>
+</draw_ops>
+
+<draw_ops name="menu_button_focused">
+  <image filename="menu-active.xpm" x="1" y="1" width="object_width" height="object_height"/>
+</draw_ops>
+
+<draw_ops name="menu_button_pressed">
+  <image filename="menu-pressed.xpm" x="1" y="1" width="object_width" height="object_height"/>
+</draw_ops>
+
+<draw_ops name="menu_button_unfocused">
+  <image filename="menu-inactive.xpm" x="1" y="1" width="object_width" height="object_height"/>
+</draw_ops>
+
+<draw_ops name="shade_button_focused">
+  <image filename="shade-active.xpm" x="1" y="1" width="object_width" height="object_height"/>
+</draw_ops>
+
+<draw_ops name="shade_button_prelight">
+  <image filename="shade-prelight.xpm" x="1" y="1" width="object_width" height="object_height"/>
+</draw_ops>
+
+<draw_ops name="shade_button_pressed">
+  <image filename="shade-pressed.xpm" x="1" y="1" width="object_width" height="object_height"/>
+</draw_ops>
+
+<draw_ops name="shade_button_unfocused">
+  <image filename="shade-inactive.xpm" x="1" y="1" width="object_width" height="object_height"/>
+</draw_ops>
+
+<draw_ops name="unshade_button_focused">
+  <image filename="shade-toggled-active.xpm" x="1" y="1" width="object_width" height="object_height"/>
+</draw_ops>
+
+<draw_ops name="unshade_button_prelight">
+  <image filename="shade-toggled-prelight.xpm" x="1" y="1" width="object_width" height="object_height"/>
+</draw_ops>
+
+<draw_ops name="unshade_button_pressed">
+  <image filename="shade-toggled-pressed.xpm" x="1" y="1" width="object_width" height="object_height"/>
+</draw_ops>
+
+<draw_ops name="unshade_button_unfocused">
+  <image filename="shade-toggled-inactive.xpm" x="1" y="1" width="object_width" height="object_height"/>
+</draw_ops>
+
+<draw_ops name="stick_button_focused">
+  <image filename="stick-active.xpm" x="1" y="1" width="object_width" height="object_height"/>
+</draw_ops>
+
+<draw_ops name="stick_button_prelight">
+  <image filename="stick-prelight.xpm" x="1" y="1" width="object_width" height="object_height"/>
+</draw_ops>
+
+<draw_ops name="stick_button_pressed">
+  <image filename="stick-pressed.xpm" x="1" y="1" width="object_width" height="object_height"/>
+</draw_ops>
+
+<draw_ops name="stick_button_unfocused">
+  <image filename="stick-inactive.xpm" x="1" y="1" width="object_width" height="object_height"/>
+</draw_ops>
+
+<draw_ops name="unstick_button_focused">
+  <image filename="stick-toggled-active.xpm" x="1" y="1" width="object_width" height="object_height"/>
+</draw_ops>
+
+<draw_ops name="unstick_button_prelight">
+  <image filename="stick-toggled-prelight.xpm" x="1" y="1" width="object_width" height="object_height"/>
+</draw_ops>
+
+<draw_ops name="unstick_button_pressed">
+  <image filename="stick-toggled-pressed.xpm" x="1" y="1" width="object_width" height="object_height"/>
+</draw_ops>
+
+<draw_ops name="unstick_button_unfocused">
+  <image filename="stick-toggled-inactive.xpm" x="1" y="1" width="object_width" height="object_height"/>
+</draw_ops>
+
+<draw_ops name="empty"/>
+
+<!-- Frame -->
+
+<draw_ops name="left_edge_focused">
+  <line color="OuterBevel" x1="0" y1="0" x2="0" y2="height-1"/>
+  <line color="InnerBevelFocused" x1="1" y1="0" x2="1" y2="height-1"/>
+</draw_ops>
+
+<draw_ops name="left_edge_unfocused">
+  <line color="OuterBevel" x1="0" y1="0" x2="0" y2="height-1"/>
+  <line color="InnerBevelUnfocused" x1="1" y1="0" x2="1" y2="height-1"/>
+</draw_ops>
+
+<draw_ops name="right_edge_focused">
+  <line color="InnerBevelFocused" x1="0" y1="0" x2="0" y2="height-1"/>
+  <line color="OuterBevel" x1="1" y1="0" x2="1" y2="height-1"/>
+</draw_ops>
+
+<draw_ops name="right_edge_unfocused">
+  <line color="InnerBevelUnfocused" x1="0" y1="0" x2="0" y2="height-1"/>
+  <line color="OuterBevel" x1="1" y1="0" x2="1" y2="height-1"/>
+</draw_ops>
+
+<draw_ops name="vertical_edge">
+  <line color="OuterBevel" x1="0" y1="0" x2="0" y2="height-1"/>
+</draw_ops>
+
+<draw_ops name="bottom_edge_focused">
+  <line color="OuterBevel" x1="0" y1="0" x2="1" y2="1"/>
+  <line color="OuterBevel" x1="0" y1="1" x2="width-1" y2="1"/>
+  <line color="OuterBevel" x1="width-1" y1="0" x2="width-1" y2="1"/>
+  <line color="InnerBevelFocused" x1="1" y1="0" x2="width-2" y2="0"/>
+</draw_ops>
+
+<draw_ops name="bottom_edge_unfocused">
+  <line color="OuterBevel" x1="0" y1="0" x2="1" y2="1"/>
+  <line color="OuterBevel" x1="0" y1="1" x2="width-1" y2="1"/>
+  <line color="OuterBevel" x1="width-1" y1="0" x2="width-1" y2="1"/>
+  <line color="InnerBevelUnfocused" x1="1" y1="0" x2="width-2" y2="0"/>
+</draw_ops>
+
+<draw_ops name="horizontal_edge">
+  <line color="OuterBevel" x1="0" y1="0" x2="width-1" y2="0"/>
+</draw_ops>
+
+<draw_ops name="titlebar_focused">
+  <line color="OuterBevel" x1="0" y1="1" x2="0" y2="height-1"/>
+  <line color="OuterBevel" x1="1" y1="0" x2="1" y2="1"/>
+  <line color="OuterBevel" x1="2" y1="0" x2="width-3" y2="0"/>
+  <line color="OuterBevel" x1="width-2" y1="0" x2="width-2" y2="1"/>
+  <line color="OuterBevel" x1="width-1" y1="1" x2="width-1" y2="height-1"/>
+  
+  <line color="InnerBevelFocused" x1="1" y1="2" x2="1" y2="height-1"/>
+  <line color="InnerBevelFocused" x1="2" y1="1" x2="width-3" y2="1"/>
+  <line color="InnerBevelFocused" x1="width-2" y1="2" x2="width-2" y2="height-1"/>
+  <gradient type="vertical" x="2" y="2" width="width-4" height="height-2">
+    <color value="TitleTopFocused"/>
+    <color value="TitleBottomFocused"/>
+  </gradient>
+  <!-- NOTE: this draw ops order is intentional as we overwrite two gradient pixels -->
+  <line color="InnerBevelFocused" x1="2" y1="2" x2="2" y2="2"/>
+  <line color="InnerBevelFocused" x1="width-3" y1="2" x2="width-3" y2="2"/>
+</draw_ops>
+
+<draw_ops name="titlebar_unfocused">
+  <line color="TopOuterBevelUnfocused" x1="1" y1="0" x2="width-2" y2="0"/>
+  <gradient type="vertical" x="0" y="1" width="1" height="height-1">
+    <color value="TopOuterBevelUnfocused"/>
+    <color value="OuterBevel"/>
+  </gradient>
+  <gradient type="vertical" x="width-1" y="1" width="1" height="height-1">
+    <color value="TopOuterBevelUnfocused"/>
+    <color value="OuterBevel"/>
+  </gradient>
+  <gradient type="vertical" x="1" y="1" width="width-2" height="height-1">
+    <color value="TitleTopUnfocused"/>
+    <color value="TitleBottomUnfocused"/>
+  </gradient>
+  <!-- NOTE: this draw ops order is intentional as we overwrite two gradient pixels -->
+  <line color="TopOuterBevelUnfocused" x1="1" y1="1" x2="1" y2="1"/>
+  <line color="TopOuterBevelUnfocused" x1="width-2" y1="1" x2="width-2" y2="1"/>
+</draw_ops>
+
+<draw_ops name="titlebar_maximized_focused">
+  <line color="OuterBevel" x1="0" y1="0" x2="width-1" y2="0"/>
+  <line color="InnerBevelFocused" x1="0" y1="1" x2="width-1" y2="1"/>
+  <gradient type="vertical" x="0" y="2" width="width" height="height-2">
+    <color value="TitleTopFocused"/>
+    <color value="TitleBottomFocused"/>
+  </gradient>
+</draw_ops>
+
+<draw_ops name="titlebar_maximized_unfocused">
+  <line color="TopOuterBevelUnfocused" x1="0" y1="0" x2="width-1" y2="0"/>
+  <gradient type="vertical" x="0" y="1" width="width" height="height-1">
+    <color value="TitleTopUnfocused"/>
+    <color value="TitleBottomUnfocused"/>
+  </gradient>
+</draw_ops>
+
+<frame_style name="normal_focused" geometry="normal">
+  <piece position="left_edge" draw_ops="left_edge_focused"/>
+  <piece position="right_edge" draw_ops="right_edge_focused"/>
+  <piece position="bottom_edge" draw_ops="bottom_edge_focused"/>
+  <piece position="title" draw_ops="title_focused"/>
+  <piece position="titlebar" draw_ops="titlebar_focused"/>
+
+  <button function="close" state="normal" draw_ops="close_button_focused"/>
+  <button function="close" state="prelight" draw_ops="close_button_prelight"/>
+  <button function="close" state="pressed" draw_ops="close_button_pressed"/>
+  <button function="minimize" state="normal" draw_ops="minimize_button_focused"/>
+  <button function="minimize" state="prelight" draw_ops="minimize_button_prelight"/>
+  <button function="minimize" state="pressed" draw_ops="minimize_button_pressed"/>
+  <button function="maximize" state="normal" draw_ops="maximize_button_focused"/>
+  <button function="maximize" state="prelight" draw_ops="maximize_button_prelight"/>
+  <button function="maximize" state="pressed" draw_ops="maximize_button_pressed"/>
+  <button function="menu" state="normal" draw_ops="menu_button_focused"/>
+  <button function="menu" state="pressed" draw_ops="menu_button_pressed"/>
+  <button function="shade" state="normal" draw_ops="shade_button_focused"/>
+  <button function="shade" state="prelight" draw_ops="shade_button_prelight"/>
+  <button function="shade" state="pressed" draw_ops="shade_button_pressed"/>
+  <button function="unshade" state="normal" draw_ops="unshade_button_focused"/>
+  <button function="unshade" state="prelight" draw_ops="unshade_button_prelight"/>
+  <button function="unshade" state="pressed" draw_ops="unshade_button_pressed"/>
+  <!-- NOTE: unfortunately, the original theme does not specify "above" buttons,
+             so we reuse stick button graphics -->
+  <button function="above" state="normal" draw_ops="stick_button_focused"/>
+  <button function="above" state="prelight" draw_ops="stick_button_prelight"/>
+  <button function="above" state="pressed" draw_ops="stick_button_pressed"/>
+  <button function="unabove" state="normal" draw_ops="unstick_button_focused"/>
+  <button function="unabove" state="prelight" draw_ops="unstick_button_prelight"/>
+  <button function="unabove" state="pressed" draw_ops="unstick_button_pressed"/>
+  <button function="stick" state="normal" draw_ops="stick_button_focused"/>
+  <button function="stick" state="prelight" draw_ops="stick_button_prelight"/>
+  <button function="stick" state="pressed" draw_ops="stick_button_pressed"/>
+  <button function="unstick" state="normal" draw_ops="unstick_button_focused"/>
+  <button function="unstick" state="prelight" draw_ops="unstick_button_prelight"/>
+  <button function="unstick" state="pressed" draw_ops="unstick_button_pressed"/>
+</frame_style>
+
+<frame_style name="normal_unfocused" geometry="normal" parent="normal_focused">
+  <piece position="left_edge" draw_ops="left_edge_unfocused"/>
+  <piece position="right_edge" draw_ops="right_edge_unfocused"/>
+  <piece position="bottom_edge" draw_ops="bottom_edge_unfocused"/>
+  <piece position="title" draw_ops="title_unfocused"/>
+  <piece position="titlebar" draw_ops="titlebar_unfocused"/>
+
+  <button function="close" state="normal" draw_ops="close_button_unfocused"/>
+  <button function="minimize" state="normal" draw_ops="minimize_button_unfocused"/>
+  <button function="maximize" state="normal" draw_ops="maximize_button_unfocused"/>
+  <button function="menu" state="normal" draw_ops="menu_button_unfocused"/>
+  <button function="shade" state="normal" draw_ops="shade_button_unfocused"/>
+  <button function="unshade" state="normal" draw_ops="shade_button_unfocused"/>
+  <!-- NOTE: see note above -->
+  <button function="above" state="normal" draw_ops="stick_button_unfocused"/>
+  <button function="unabove" state="normal" draw_ops="unstick_button_unfocused"/>
+  <button function="stick" state="normal" draw_ops="stick_button_unfocused"/>
+  <button function="unstick" state="normal" draw_ops="unstick_button_unfocused"/>
+</frame_style>
+
+<frame_style name="maximized_focused" geometry="maximized" parent="normal_focused">
+  <piece position="left_edge" draw_ops="empty"/>
+  <piece position="right_edge" draw_ops="empty"/>
+  <piece position="bottom_edge" draw_ops="empty"/>
+  <piece position="titlebar" draw_ops="titlebar_maximized_focused"/>
+</frame_style>
+
+<frame_style name="maximized_unfocused" geometry="maximized" parent="normal_unfocused">
+  <piece position="left_edge" draw_ops="empty"/>
+  <piece position="right_edge" draw_ops="empty"/>
+  <piece position="bottom_edge" draw_ops="empty"/>
+  <piece position="titlebar" draw_ops="titlebar_maximized_unfocused"/>
+</frame_style>
+
+<frame_style name="dialog_focused" geometry="dialog" parent="normal_focused">
+  <piece position="left_edge" draw_ops="vertical_edge"/>
+  <piece position="right_edge" draw_ops="vertical_edge"/>
+  <piece position="bottom_edge" draw_ops="horizontal_edge"/>
+</frame_style>
+
+<frame_style name="dialog_unfocused" geometry="dialog" parent="normal_unfocused">
+  <piece position="left_edge" draw_ops="vertical_edge"/>
+  <piece position="right_edge" draw_ops="vertical_edge"/>
+  <piece position="bottom_edge" draw_ops="horizontal_edge"/>
+</frame_style>
+
+<frame_style name="utility_focused" geometry="utility" parent="dialog_focused"/>
+
+<frame_style name="utility_unfocused" geometry="utility" parent="dialog_unfocused"/>
+
+<frame_style name="border_focused" geometry="border" parent="dialog_focused">
+  <piece position="title" draw_ops="empty"/>
+  <piece position="titlebar" draw_ops="horizontal_edge"/>
+</frame_style>
+
+<frame_style name="border_unfocused" geometry="border" parent="dialog_unfocused">
+  <piece position="title" draw_ops="empty"/>
+  <piece position="titlebar" draw_ops="horizontal_edge"/>
+</frame_style>
+
+<frame_style_set name="normal">
+  <frame focus="yes" state="normal" resize="both" style="normal_focused"/>
+  <frame focus="no" state="normal" resize="both" style="normal_unfocused"/>
+  <frame focus="yes" state="maximized" style="maximized_focused"/>
+  <frame focus="no" state="maximized" style="maximized_unfocused"/>
+  <frame focus="yes" state="shaded" style="normal_focused"/>
+  <frame focus="no" state="shaded" style="normal_unfocused"/>
+  <frame focus="yes" state="maximized_and_shaded" style="maximized_focused"/>
+  <frame focus="no" state="maximized_and_shaded" style="maximized_unfocused"/>
+</frame_style_set>
+
+<frame_style_set name="dialog">
+  <frame focus="yes" state="normal" resize="both" style="dialog_focused"/>
+  <frame focus="no" state="normal" resize="both" style="dialog_unfocused"/>
+  <frame focus="yes" state="maximized" style="maximized_focused"/>
+  <frame focus="no" state="maximized" style="maximized_unfocused"/>
+  <frame focus="yes" state="shaded" style="dialog_focused"/>
+  <frame focus="no" state="shaded" style="dialog_unfocused"/>
+  <frame focus="yes" state="maximized_and_shaded" style="maximized_focused"/>
+  <frame focus="no" state="maximized_and_shaded" style="maximized_unfocused"/>
+</frame_style_set>
+
+<frame_style_set name="utility">
+  <frame focus="yes" state="normal" resize="both" style="utility_focused"/>
+  <frame focus="yes" state="maximized" style="utility_focused"/>
+  <frame focus="yes" state="shaded" style="utility_focused"/>
+  <frame focus="yes" state="maximized_and_shaded" style="utility_focused"/>
+  <frame focus="no" state="normal" resize="both" style="utility_unfocused"/>
+  <frame focus="no" state="maximized" style="utility_unfocused"/>
+  <frame focus="no" state="shaded" style="utility_unfocused"/>
+  <frame focus="no" state="maximized_and_shaded" style="utility_unfocused"/>
+</frame_style_set>
+
+<frame_style_set name="border">
+  <frame focus="yes" state="normal" resize="both" style="border_focused"/>
+  <frame focus="yes" state="maximized" style="border_focused"/>
+  <frame focus="yes" state="shaded" style="border_focused"/>
+  <frame focus="yes" state="maximized_and_shaded" style="border_focused"/>
+  <frame focus="no" state="normal" resize="both" style="border_unfocused"/>
+  <frame focus="no" state="maximized" style="border_unfocused"/>
+  <frame focus="no" state="shaded" style="border_unfocused"/>
+  <frame focus="no" state="maximized_and_shaded" style="border_unfocused"/>
+</frame_style_set>
+
+<window type="normal" style_set="normal"/>
+<!-- STYLE NOTE: Change "dialog" to "normal" in the two following lines to have 2px borders
+     in dialog windows. -->
+<window type="dialog" style_set="dialog"/>
+<window type="modal_dialog" style_set="dialog"/>
+<window type="menu" style_set="utility"/>
+<window type="utility" style_set="utility"/>
+<window type="border" style_set="border"/>
+
+</metacity_theme>
