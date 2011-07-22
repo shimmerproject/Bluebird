@@ -157,7 +157,6 @@ style "murrine-default"
 		scrollbarstyle      = 0                 # 0 = nothing, 1 = circles, 2 = handles, 3 = diagonal stripes, 4 = diagonal stripes and handles, 5 = horizontal stripes, 6 = horizontal stripes and handles
 		separatorstyle      = 1                 # 0 = Hard seperators 1 = Smooth seperators
 		sliderstyle         = 0                 # 0 = nothing added, 1 = handles
-		spinbuttonstyle	    = 1
 		stepperstyle        = 1                 # 0 = standard, 1 = integrated stepper handles, 2 = unknown
 		progressbarstyle    = 1                 # 0 = nothing, 1 = stripes, 2 = lines
 		focus_color         = @selected_bg_color
