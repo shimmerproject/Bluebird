@@ -1,0 +1,158 @@
+* {
+	-GtkArrow-arrow-scaling: 0.6;
+	-GtkButton-child-displacement-x: 1;
+	-GtkButton-child-displacement-y: 1;
+	-GtkButton-default-border: 0;
+	-GtkButton-image-spacing: 0;
+	-GtkButton-interior-focus: true;
+	-GtkButton-inner-border: 3;
+	-GtkCheckButton-indicator-size: 16;
+	-GtkCheckMenuItem-indicator-size: 14;
+	-GtkEntry-inner-border: 2;
+	-GtkEntry-progress-border: 0; 
+	-GtkExpander-expander-size: 10;   
+	-GtkHTML-link-color: @link_color;
+	-GtkIMHtml-hyperlink-color: @link_color;
+	-GtkMenu-horizontal-padding: 0;
+	-GtkMenu-vertical-padding: 0;  
+	-GtkMenuItem-arrow-scaling: 0.5;
+	-GtkMenuBar-internal-padding: 0;
+	-GtkNotebook-tab-overlap: -1;
+	-GtkPaned-handle-size: 0;
+	-GtkProgressBar-min-horizontal-bar-height: 10;
+	-GtkProgressBar-min-vertical-bar-width: 10;
+	-GtkRange-trough-border: 1;
+	-GtkRange-slider-width: 9;
+	-GtkRange-stepper-size: 9;
+	-GtkRange-trough-under-steppers: 1;
+	-GtkRange-stepper-spacing: 0;
+	-GtkRange-show-fill-level: 1;
+	-GtkScale-slider-length: 11;
+	-GtkScale-trough-border: 0;
+	-GtkScale-trough-side-details: 1;
+	-GtkScrollbar-activate-slider: 1;
+	-GtkScrollbar-trough-border: 0;
+	-GtkScrollbar-slider-width: 11;
+	-GtkScrollbar-min-slider-length: 30;
+	-GtkScrollbar-has-forward-stepper: 0;
+	-GtkScrollbar-has-backward-stepper: 0;
+	-GtkScrollbar-has-secondary-forward-stepper: 0;
+	-GtkScrollbar-has-secondary-backward-stepper: 0;
+	-GtkScrolledWindow-scrollbar-spacing: 0;
+	-GtkScrolledWindow-scrollbars-within-bevel: 1;
+	-GtkSeparatorMenuItem-horizontal-padding: 0;
+	-GtkTextView-error-underline-color: @error_color;
+	-GtkToolButton-icon-spacing: 6;
+	-GtkToolItemGroup-expander-size: 11;
+	-GtkToolbar-internal-padding: 0;
+	-GtkTreeView-expander-size: 4;
+	-GtkTreeView-vertical-separator: 0;
+	-GtkWidget-wide-separators: 1;
+	-GtkWidget-separator-width: 2;
+	-GtkWidget-separator-height: 2;
+	-GtkWidget-focus-padding: 0;
+	-GtkWidget-focus-line-width: 1;
+	-GtkWidget-link-color: @link_color;
+	-GtkWidget-visited-link-color: @link_color;
+	-GtkWindow-resize-grip-default: false;
+	-WnckTasklist-fade-overlay-rect: 0;
+
+	border-width: 1;
+	padding: 1;
+
+	engine: unico;
+
+	-unico-focus-border-color: alpha (@selected_bg_color, 0.6);
+	-unico-focus-border-radius: 4;
+	-unico-focus-fill-color: alpha (@selected_bg_color, 0.25);
+	-unico-focus-outer-stroke-color: @transparent;
+	-unico-inner-stroke-color: none;
+	-unico-inner-stroke-width: 0;
+}
+
+/***************
+ * Base States *
+ ***************/
+
+GtkWindow {
+	color: @fg_color;
+}
+
+* {
+	background-color: @bg_color;
+	-unico-inner-stroke-style: none;
+	-unico-outer-stroke-style: none;
+}
+
+*:hover {
+	background-color: shade (@bg_color, 1.02);
+	color: @fg_color;
+}
+
+*:selected {
+	background-color: @selected_bg_color;
+	color: @selected_fg_color;
+}
+
+*:selected:focused {
+	background-color: @selected_bg_color;
+	color: @selected_fg_color;
+}
+
+*:insensitive {
+	background-color: @bg_color;
+	color: @insensitive_fg_color;
+	border-color: @insensitive_border_color;
+}
+
+*:active {
+	background-color: shade (@bg_color, 0.915);
+}
+
+.background {
+	border-style: none;
+	border-width: 0;
+	border-radius: 0;
+}
+
+.tooltip {
+	padding: 4 4;
+	border-style: none;
+	border-width: 0;
+	border-color: shade (@tooltip_bg_color, 0.80);
+	background-color: @tooltip_bg_color;
+	color: @tooltip_fg_color;
+}
+
+.grip {
+	background-color: shade (@inactive_frame_color, 0.93);
+}
+
+.rubberband {
+	background-color: alpha (@selected_bg_color, 0.35);
+	border-color: @selected_bg_color;
+	border-style: solid;
+	border-width: 1;
+	border-radius: 2;
+}
+
+.pane-separator {
+	border-style: none;
+	border-width: 0;
+	color: shade (@inactive_frame_color, 0.80);
+}
+
+.pane-separator:prelight,
+.pane-separator:selected {
+	color: @text_color;
+}
+
+GtkStatusbar {
+	padding: 5;
+	color: @fg_color;
+	-GtkStatusbar-shadow-type: none;
+}
+
+GtkStatusbar .frame {
+	border-width: 0;
+}
