@@ -31,11 +31,11 @@
 	-GtkScale-trough-border: 0;
 	-GtkScale-trough-side-details: 1;
 	-GtkScrollbar-activate-slider: 1;
-	-GtkScrollbar-trough-border: 0;
-	-GtkScrollbar-slider-width: 11;
+	-GtkScrollbar-trough-border: 2;
+	-GtkScrollbar-slider-width: 9;
 	-GtkScrollbar-min-slider-length: 30;
-	-GtkScrollbar-has-forward-stepper: 0;
-	-GtkScrollbar-has-backward-stepper: 0;
+	-GtkScrollbar-has-forward-stepper: 1;
+	-GtkScrollbar-has-backward-stepper: 1;
 	-GtkScrollbar-has-secondary-forward-stepper: 0;
 	-GtkScrollbar-has-secondary-backward-stepper: 0;
 	-GtkScrolledWindow-scrollbar-spacing: 0;
