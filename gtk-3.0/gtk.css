@@ -16,7 +16,7 @@
 @define-color tooltip_fg_color #FFFFFF;
 
 /* misc colors used by gtk+ */
-@define-color link_color #74a0c6;
+@define-color link_color #08c;
 @define-color warning_color #f57900;
 @define-color error_color #cc0000;
 @define-color success_color #4e9a06;
