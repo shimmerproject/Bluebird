@@ -10,7 +10,6 @@ gtk_color_scheme = "tooltip_bg_color:#000000\ntooltip_fg_color:#E1E1E1" # Toolti
 gtk_color_scheme = "link_color:#08c" # Hyperlinks
 gtk_color_scheme = "panel_bg:#303030" # Panel bg color. Not used here though.
 gtk_color_scheme = "fm_color:#F7F7F7" # Color used in Nautilus and Thunar.
-gtk_color_scheme = "frame_color:#CDCDCD\ninactive_frame_color:#CDCDCD" # Fix for Chrome
 
 ### EXTERNAL FILES ###
 include "panel.rc"       # This includes the file that handles panel theming.
@@ -576,5 +575,22 @@ style "murrine-menubar-fixes"
 }
 
 widget_class "*GtkFixed*.GtkMenuBar*"	style "murrine-menubar-fixes"
+
+style "chrome-gtk-frame"
+{
+    ChromeGtkFrame::frame-color = shade (0.5, @selected_bg_color)
+    ChromeGtkFrame::inactive-frame-color = shade (0.5, @selected_bg_color)
+
+    ChromeGtkFrame::frame-gradient-size = 100
+    ChromeGtkFrame::frame-gradient-color = shade (1.06,"#4f7ba8")
+    ChromeGtkFrame::inactive-frame-gradient-color = shade (1.06,"#4f7ba8")
+
+    ChromeGtkFrame::scrollbar-trough-color = @base_color
+    ChromeGtkFrame::scrollbar-slider-normal-color = shade (0.65, @base_color)
+    ChromeGtkFrame::scrollbar-slider-active-color = shade (0.5, @base_color)
+    ChromeGtkFrame::scrollbar-slider-prelight-color = shade (0.5, @base_color)
+}
+
+class "ChromeGtkFrame" style "chrome-gtk-frame"
 
 include "nautilus.rc"    # Nautilus styling
