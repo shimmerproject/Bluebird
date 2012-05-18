@@ -1505,8 +1505,9 @@ GtkComboBox .separator {
 .spinbutton.button:hover,
 .notebook .spinbutton.button:hover {
     background-image: -gtk-gradient (linear, left top, left bottom,
-                                     from (shade (@bg_color, 1.0)),
-                                     to (shade (@bg_color, 0.8)));
+                                     from (mix (shade (@button_bg_color, 1.2),shade (@selected_bg_color, 1.35),0.5)),
+                                     to (mix (shade (@button_bg_color, 0.98),shade (@selected_bg_color, 1.2),0.5)));
+
     border-top-color: shade (@bg_color, 0.64);
     border-right-color: shade (@bg_color, 0.76);
     border-bottom-color: shade (@bg_color, 0.82);
