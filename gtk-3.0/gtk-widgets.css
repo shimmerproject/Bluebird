@@ -525,7 +525,7 @@ row:selected {
 		from (shade (@bg_color, 0.68)),
 		to (shade (@bg_color, 0.68)));
 	-unico-inner-stroke-style: custom;
-	-unico-inner-stroke-color: alpha (shade (@base_color, 0.1), 0.02);
+	-unico-inner-stroke-color: alpha (shade (@base_color, 0.98), 1.0);
 	border-width: 1px;
 	border-style: solid;
 }
@@ -570,8 +570,8 @@ row:selected {
 		from (shade (@selected_bg_color, 1.1)),
 		to (shade (@selected_bg_color, 0.9)));
 
-	-unico-bullet-color: @text_color; /* shade (@selected_fg_color, 1.0); */
-	-unico-bullet-outline-color: shade (@selected_bg_color, 1.2);
+	-unico-bullet-color: shade (@selected_fg_color, 1.0);
+	-unico-bullet-outline-color: shade (@text_color,1.2);
 	-unico-border-gradient: -gtk-gradient (linear, left top, left bottom,
 		from (shade (@selected_bg_color, 0.7)),
 		to (shade (@selected_bg_color, 0.7)));
@@ -598,7 +598,7 @@ row:selected {
 		to (shade (@selected_bg_color, 0.9)));
 
 	-unico-bullet-color: shade (@selected_fg_color, 1.0);
-	-unico-bullet-outline-color: shade (@selected_bg_color, 0.6);
+	-unico-bullet-outline-color: shade (@text_color, 1.2);
 	-unico-border-gradient: -gtk-gradient (linear, left top, left bottom,
 		from (shade (@selected_bg_color, 0.7)),
 		to (shade (@selected_bg_color, 0.7)));
@@ -1479,6 +1479,7 @@ GtkComboBox .separator {
     border-radius: 0;
     border-width: 0 1px 0 1px;
 
+    color: shade (@text_color, 1.2);
     -unico-outer-stroke-width: 0;
 }
 
@@ -1496,6 +1497,20 @@ GtkComboBox .separator {
     background-image: -gtk-gradient (linear, left top, left bottom,
                                      from (shade (@bg_color, 1.1)),
                                      to (shade (@bg_color, 0.9)));
+    border-top-color: shade (@bg_color, 0.64);
+    border-right-color: shade (@bg_color, 0.76);
+    border-bottom-color: shade (@bg_color, 0.82);
+    border-left-color: shade (@bg_color, 0.76);
+    border-width: 0 1px 0 1px;
+
+    -unico-border-gradient: none;
+}
+
+.spinbutton.button:hover,
+.notebook .spinbutton.button:hover {
+    background-image: -gtk-gradient (linear, left top, left bottom,
+                                     from (shade (@bg_color, 1.0)),
+                                     to (shade (@bg_color, 0.8)));
     border-top-color: shade (@bg_color, 0.64);
     border-right-color: shade (@bg_color, 0.76);
     border-bottom-color: shade (@bg_color, 0.82);
