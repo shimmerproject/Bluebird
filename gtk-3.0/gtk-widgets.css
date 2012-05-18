@@ -1187,34 +1187,36 @@ GtkScale {
 
 GtkScale.slider {
 	background-image: -gtk-gradient (linear, left top, left bottom,
-                                     from (shade (@dark_bg_color, 1.1)),
-                                     to (shade (@dark_bg_color, 0.9)));
+                                     from (shade (@base_color, 1.05)),
+                                     to (shade (@base_color, 0.85)));
+
 	border-style: solid;
 
 	-unico-border-gradient: -gtk-gradient (linear, left top, left bottom,
-                                           from (shade (@dark_bg_color, 0.85)),
-                                           to (shade (@dark_bg_color, 0.67)));
-
-	-unico-inner-stroke-gradient: -gtk-gradient (linear, left top, left bottom,
-                                                 from (shade (@dark_bg_color, 1.16)),
-                                                 to (shade (@dark_bg_color, 1.015)));
-	-unico-inner-stroke-width: 1;
+                                           from (shade (@base_color, 0.45)),
+                                           to (shade (@base_color, 0.55)));
+	-unico-inner-stroke-width: 0;
 	border-radius: 12px;
 }
 
 GtkScale.slider:hover {
-    background-image: -gtk-gradient (linear, left top, left bottom,
-                                     from (shade (@dark_bg_color, 0.5)),
-                                     to (shade (@dark_bg_color, 0.45)));
-    
+	background-image: -gtk-gradient (linear, left top, left bottom,
+                                     from (shade (@base_color, 1.15)),
+                                     to (shade (@base_color, 0.95)));
     -unico-border-gradient: -gtk-gradient (linear, left top, left bottom,
-                                           from (shade (@dark_bg_color, 0.65)),
-                                           to (shade (@dark_bg_color, 0.5)));
-    -unico-glow-color: shade (@selected_bg_color, 0.85);
+                                           from (shade (@base_color, 0.45)),
+                                           to (shade (@base_color, 0.55)));
+}
+
+GtkScale.slider:active {
+	background-image: -gtk-gradient (linear, left top, left bottom,
+                                     from (shade (@base_color, 1.05)),
+                                     to (shade (@base_color, 0.85)));
+    -unico-border-gradient: -gtk-gradient (linear, left top, left bottom,
+                                           from (shade (@base_color, 0.45)),
+                                           to (shade (@base_color, 0.55)));
+    -unico-glow-color: shade (@selected_bg_color, 1.0);
     -unico-glow-radius: 12;
-    -unico-inner-stroke-gradient: -gtk-gradient (linear, left top, left bottom,
-                                                 from (shade (@dark_bg_color, 0.9)),
-                                                 to (shade (@dark_bg_color, 0.85)));
 }
 
 GtkScale.progressbar {
@@ -1226,18 +1228,18 @@ GtkScale.progressbar {
 
 .scale.highlight.left {
 	background-image: -gtk-gradient (linear, left top, left bottom,
-                                     from (shade (@dark_bg_color, 1.13)),
-                                     to (shade (@dark_bg_color, 0.9)));
+                                     from (shade (@selected_bg_color, 1.13)),
+                                     to (shade (@selected_bg_color, 0.9)));
 	border-style: solid;
 	border-width: 1px;
 	
 	-unico-border-gradient: -gtk-gradient (linear, left top, left bottom,
-                                           from (shade (@dark_bg_color, 0.75)),
-                                           to (shade (@dark_bg_color, 0.75)));
+                                           from (shade (@selected_bg_color, 0.75)),
+                                           to (shade (@selected_bg_color, 0.75)));
 
 	-unico-inner-stroke-gradient: -gtk-gradient (linear, left top, left bottom,
-                                                 from (shade (@dark_bg_color, 1.22)),
-                                                 to (shade (@dark_bg_color, 1.0)));
+                                                 from (shade (@selected_bg_color, 1.22)),
+                                                 to (shade (@selected_bg_color, 1.0)));
 	-unico-inner-stroke-width: 1px;
 	-unico-outer-stroke-color: @transparent;
 	-unico-outer-stroke-gradient: none;
@@ -1246,18 +1248,18 @@ GtkScale.progressbar {
 
 .scale.highlight.bottom {
 	background-image: -gtk-gradient (linear, left top, right top,
-                                     from (shade (@dark_bg_color, 1.13)),
-                                     to (shade (@dark_bg_color, 0.9)));
+                                     from (shade (@selected_bg_color, 1.13)),
+                                     to (shade (@selected_bg_color, 0.9)));
 	border-style: solid;
 	border-width: 1px;
 	
 	-unico-border-gradient: -gtk-gradient (linear, left top, right top,
-                                           from (shade (@dark_bg_color, 0.75)),
-                                           to (shade (@dark_bg_color, 0.75)));
+                                           from (shade (@selected_bg_color, 0.75)),
+                                           to (shade (@selected_bg_color, 0.75)));
 
 	-unico-inner-stroke-gradient: -gtk-gradient (linear, left top, right top,
-                                                 from (shade (@dark_bg_color, 1.22)),
-                                                 to (shade (@dark_bg_color, 1.0)));
+                                                 from (shade (@selected_bg_color, 1.22)),
+                                                 to (shade (@selected_bg_color, 1.0)));
 	-unico-inner-stroke-width: 1px;
 	-unico-outer-stroke-color: @transparent;
 	-unico-outer-stroke-gradient: none;
@@ -1266,36 +1268,28 @@ GtkScale.progressbar {
 
 GtkScale.trough {
 	background-image: -gtk-gradient (linear, left top, left bottom,
-		from (shade (@bg_color, 0.92)),
-		to (shade (@bg_color, 0.96)));
+		from (shade (@bg_color, 0.62)),
+		to (shade (@bg_color, 0.72)));
 	border-width: 1px;
 	border-style: solid;
 
 	-unico-border-gradient: -gtk-gradient (linear, left top, left bottom,
-		from (shade (@bg_color, 0.8)),
-		to (shade (@bg_color, 0.8)));
-	-unico-outer-stroke-gradient: -gtk-gradient (linear, left top, left bottom,
-                                                 from (alpha (shade (@bg_color, 0.85), 0.2)),
-                                                 to (alpha (shade (@bg_color, 1.25), 0.6)));
-	-unico-outer-stroke-width: 1px;
+		from (shade (@bg_color, 0.5)),
+		to (shade (@bg_color, 0.5)));
 }
 
 
 
 GtkScale.trough.vertical {
 	background-image: -gtk-gradient (linear, left top, left bottom,
-		from (shade (@bg_color, 0.92)),
-		to (shade (@bg_color, 0.96)));
+		from (shade (@bg_color, 0.62)),
+		to (shade (@bg_color, 0.72)));
 	border-width: 1px;
 	border-style: solid;
 
 	-unico-border-gradient: -gtk-gradient (linear, left top, left bottom,
-		from (shade (@bg_color, 0.8)),
-		to (shade (@bg_color, 0.8)));
-	-unico-outer-stroke-gradient: -gtk-gradient (linear, left top, right top,
-                                                 from (alpha (shade (@bg_color, 0.85), 0.2)),
-                                                 to (alpha (shade (@bg_color, 1.2), 0.6)));
-	-unico-outer-stroke-width: 1px;
+		from (shade (@bg_color, 0.5)),
+		to (shade (@bg_color, 0.5)));
 }
 
 /*************
