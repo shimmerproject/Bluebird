@@ -17,7 +17,7 @@
 	-GtkMenu-vertical-padding: 0;  
 	-GtkMenuItem-arrow-scaling: 0.5;
 	-GtkMenuBar-internal-padding: 0;
-	-GtkNotebook-tab-overlap: -1;
+	-GtkNotebook-tab-overlap: 4;
 	-GtkPaned-handle-size: 3;
 	-GtkProgressBar-min-horizontal-bar-height: 10;
 	-GtkProgressBar-min-vertical-bar-width: 10;
@@ -1032,27 +1032,28 @@ GtkImage:insensitive {
 .notebook {
 	padding: 2px;
 	border-radius: 4px;
-	background-color: shade (@bg_color, 1.05);
+	background-color: shade (@base_color, 0.96);
 }
 
 .notebook tab {
-	border-radius: 4px;
-	padding: 2px 3px 0;
+	border-radius: 3px;
+	padding: 6px 6px 0;
 	background-image: -gtk-gradient (linear, left top, left bottom,
-		from (shade (@bg_color, 0.87)),
-		to (shade (@bg_color, 0.82)));
+		from (shade (@base_color, 0.96)),
+		to (shade (@base_color, 0.86)));
 	-unico-border-gradient: -gtk-gradient (linear, left top, left bottom,
                                            from (shade (@bg_color, 0.75)),
                                            to (shade (@bg_color, 0.7)));
-	-unico-inner-stroke-color: alpha (shade (@bg_color, 0.8), 0.3);
+	-unico-inner-stroke-color: alpha (shade (@base_color, 0.8), 0.3);
 	-unico-inner-stroke-gradient: none;
 	-unico-inner-stroke-width: 1px;
 }
 
 .notebook tab:active {
+	padding: 7px 7px 0;
 	background-image: -gtk-gradient (linear, left top, left bottom,
-		from (shade (@bg_color, 1.1)),
-		to (shade (@bg_color, 1.05)));
+		from (shade (@base_color, 1.02)),
+		to (shade (@base_color, 0.96)));
 	-unico-border-gradient: -gtk-gradient (linear, left top, left bottom,
                                            from (shade (@bg_color, 0.7)),
                                            to (shade (@bg_color, 0.66)));
