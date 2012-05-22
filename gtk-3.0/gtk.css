@@ -27,7 +27,6 @@
 @define-color error_bg_color rgb (237, 54, 54);
 @define-color link_color #74a0c6;
 @define-color error_color #cc0000;
-@define-color success_color #4e9a06;
 
 /* theme common colors */
 @define-color button_bg_color shade (@bg_color,1.02);
@@ -61,9 +60,9 @@
 @define-color progressbar_through_a #c7c7c7;
 @define-color progressbar_through_b #d7d7d7;
 @define-color progressbar_through_border #a3a3a3;
-@define-color progressbar_background_a #a2b8cb;
-@define-color progressbar_background_b #b5c8d7;
-@define-color progressbar_border #8298aa;
+@define-color progressbar_background_a #6d8eaf;
+@define-color progressbar_background_b #6d8eaf;
+@define-color progressbar_border #51667b;
 
 @define-color menuitem_background_a #8ba4b8;
 @define-color menuitem_background_b #7a94a9;

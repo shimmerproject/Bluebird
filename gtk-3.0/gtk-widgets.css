@@ -1087,8 +1087,8 @@ GtkImage:insensitive {
 .progressbar row:selected:focused {
 	background-image: -gtk-gradient (linear,
 		left top, left bottom,
-		from (shade (@progressbar_background_a,1.04)),
-		to (shade (@progressbar_background_b,0.98)));
+		from (shade (@progressbar_background_a,1.14)),
+		to (shade (@progressbar_background_b,1.08)));
 	-unico-background-texture: url("progressbar.png");
 	border-radius: 4px;
 	border-style: solid;
@@ -1229,18 +1229,19 @@ GtkScale.progressbar {
 
 .scale.highlight.left {
 	background-image: -gtk-gradient (linear, left top, left bottom,
-                                     from (shade (@selected_bg_color, 1.13)),
-                                     to (shade (@selected_bg_color, 0.9)));
+                                     from (shade (@progressbar_background_a, 0.94)),
+                                     to (shade (@progressbar_background_b, 0.88)));
 	border-style: solid;
-	border-width: 1px;
-	
+	border-width: 0px;
+	border-radius: 4px;
+
 	-unico-border-gradient: -gtk-gradient (linear, left top, left bottom,
-                                           from (shade (@selected_bg_color, 0.75)),
-                                           to (shade (@selected_bg_color, 0.75)));
+                                           from (shade (@base_color, 0.45)),
+                                           to (shade (@base_color, 0.55)));
 
 	-unico-inner-stroke-gradient: -gtk-gradient (linear, left top, left bottom,
-                                                 from (shade (@selected_bg_color, 1.22)),
-                                                 to (shade (@selected_bg_color, 1.0)));
+                                           from (shade (@progressbar_border, 0.94)),
+                                           to (shade (@progressbar_border, 0.88)));
 	-unico-inner-stroke-width: 1px;
 	-unico-outer-stroke-color: @transparent;
 	-unico-outer-stroke-gradient: none;
@@ -1249,18 +1250,18 @@ GtkScale.progressbar {
 
 .scale.highlight.bottom {
 	background-image: -gtk-gradient (linear, left top, right top,
-                                     from (shade (@selected_bg_color, 1.13)),
-                                     to (shade (@selected_bg_color, 0.9)));
+                                     from (shade (@progressbar_background_a, 0.94)),
+                                     to (shade (@progressbar_background_b, 0.88)));
 	border-style: solid;
-	border-width: 1px;
+	border-width: 0px;
 	
 	-unico-border-gradient: -gtk-gradient (linear, left top, right top,
-                                           from (shade (@selected_bg_color, 0.75)),
-                                           to (shade (@selected_bg_color, 0.75)));
+                                           from (shade (@base_color, 0.45)),
+                                           to (shade (@base_color, 0.55)));
 
 	-unico-inner-stroke-gradient: -gtk-gradient (linear, left top, right top,
-                                                 from (shade (@selected_bg_color, 1.22)),
-                                                 to (shade (@selected_bg_color, 1.0)));
+                                           from (shade (@progressbar_border, 0.94)),
+                                           to (shade (@progressbar_border, 0.88)));
 	-unico-inner-stroke-width: 1px;
 	-unico-outer-stroke-color: @transparent;
 	-unico-outer-stroke-gradient: none;
@@ -1273,6 +1274,7 @@ GtkScale.trough {
 		to (shade (@bg_color, 0.72)));
 	border-width: 1px;
 	border-style: solid;
+	border-radius: 4px;
 
 	-unico-border-gradient: -gtk-gradient (linear, left top, left bottom,
 		from (shade (@bg_color, 0.5)),
@@ -1324,29 +1326,23 @@ GtkScale.trough.vertical {
 .scrollbar.slider.horizontal,
 .scrollbar.button.horizontal {
 	background-image: none;
-	background-color: #a1a1a1;
-	border-style: none;
-	border-radius: 10px;
-	border-width: 0;
-}
-
-.scrollbar.slider.vertical:prelight,
-.scrollbar.slider.horizontal:prelight {
-	background-image: none;
-	background-color: #686868;
-	border-color: #8e8e8e;
+	background-color: #b8b8b8;
+	border-color: #aaaaaa;
 	border-radius: 10px;
 	border-width: 1px;
 }
 
+.scrollbar.slider.vertical:prelight,
+.scrollbar.slider.horizontal:prelight,
 .scrollbar.slider.vertical:prelight:active,
 .scrollbar.slider.horizontal:prelight:active {
 	background-image: none;
 	background-color: #686868;
-	border-color: #8e8e8e;
+	border-color: #909090;
 	border-radius: 10px;
 	border-width: 1px;
 }
+
 
 .scrollbar.slider:insensitive {
 	background-color: @base_color;
