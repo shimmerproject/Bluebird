@@ -21,15 +21,14 @@
 	-GtkPaned-handle-size: 3;
 	-GtkProgressBar-min-horizontal-bar-height: 10;
 	-GtkProgressBar-min-vertical-bar-width: 10;
-	-GtkRange-trough-border: 1;
 	-GtkRange-slider-width: 9;
-	-GtkRange-stepper-size: 9;
-	-GtkRange-trough-under-steppers: 1;
 	-GtkRange-stepper-spacing: 0;
+	-GtkRange-trough-border: 4px;
+	-GtkRange-arrow-scaling: 0.3;
+	-GtkRange-stepper-size: 13;
+	-GtkScrollbar-min-slider-length: 50;
+	-GtkRange-trough-under-steppers: 0;
 	-GtkScrollbar-activate-slider: 1;
-	-GtkScrollbar-trough-border: 2px;
-	-GtkScrollbar-slider-width: 9;
-	-GtkScrollbar-min-slider-length: 30;
 	-GtkScrollbar-has-forward-stepper: 0;
 	-GtkScrollbar-has-backward-stepper: 0;
 	-GtkScrollbar-has-secondary-forward-stepper: 0;
@@ -1301,13 +1300,6 @@ GtkScale.trough.vertical {
 .scrollbar {
 	background-image: none;
 	border-style: solid;
-	-GtkRange-trough-border: 2px;
-	-GtkRange-arrow-scaling: 0.3;
-	-GtkRange-slider-width: 9;
-	-GtkRange-stepper-size: 13;
-	-GtkScrollbar-min-slider-length: 30;
-	-GtkRange-stepper-spacing: 0;
-	-GtkRange-trough-under-steppers: 0;
 	-unico-inner-stroke-style: none;
 }
 
@@ -1322,11 +1314,24 @@ GtkScale.trough.vertical {
 
 /* Sliders and buttons */
 .scrollbar.slider.vertical,
-.scrollbar.button.vertical,
+.scrollbar.button.vertical {
+
+	background-image: -gtk-gradient (linear, center top, center bottom,
+			color-stop(0, #b9b9b9),
+			color-stop(0.5, #b5b5b5), 
+			color-stop(1, #b9b9b9));
+	border-color: #aaaaaa;
+	border-radius: 10px;
+	border-width: 1px;
+}
+
 .scrollbar.slider.horizontal,
 .scrollbar.button.horizontal {
-	background-image: none;
-	background-color: #b8b8b8;
+
+	background-image: -gtk-gradient (linear, left center, right center,
+			color-stop(0, #b9b9b9),
+			color-stop(0.5, #b5b5b5), 
+			color-stop(1, #b9b9b9));
 	border-color: #aaaaaa;
 	border-radius: 10px;
 	border-width: 1px;
