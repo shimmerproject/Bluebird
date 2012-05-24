@@ -34,7 +34,7 @@
 	-GtkScrollbar-has-secondary-forward-stepper: 0;
 	-GtkScrollbar-has-secondary-backward-stepper: 0;
 	-GtkScrolledWindow-scrollbar-spacing: 0;
-	-GtkScrolledWindow-scrollbars-within-bevel: 1;
+	-GtkScrolledWindow-scrollbars-within-bevel: 0;
 	-GtkSeparatorMenuItem-horizontal-padding: 0;
 	-GtkStatusbar-shadow-type: none;
 	-GtkSwitch-slider-width: 36px;
@@ -591,8 +591,8 @@ row:selected {
 .notebook .check:active:hover,
 .notebook .radio:active:hover,
 .radio:active:hover,
-.radio row:selected:active:hover,
 .radio row:selected:focused:active:hover {
+.radio row:selected:active:hover,
 	background-image: -gtk-gradient (linear, left top, left bottom,
 		from (shade (@selected_bg_color, 1.1)),
 		to (shade (@selected_bg_color, 0.9)));
@@ -1031,11 +1031,10 @@ GtkImage:insensitive {
 .notebook {
 	padding: 2px;
 	border-radius: 4px;
-	background-color: shade (@base_color, 0.96);
+	background-color: @bg_color;
 }
 
 .notebook tab {
-	border-radius: 3px;
 	padding: 6px 6px 0;
 	background-image: -gtk-gradient (linear, left top, left bottom,
 		from (shade (@base_color, 0.96)),
@@ -1059,6 +1058,7 @@ GtkImage:insensitive {
 	-unico-inner-stroke-color: alpha (shade (@bg_color, 1.26), 0.3);
 	-unico-inner-stroke-gradient: none;
 	-unico-inner-stroke-width: 1px;
+
 }
 
 /******************
