@@ -81,7 +81,7 @@ GtkWindow {
  * states *
  **********/
 *:insensitive {
-    color: shade (@bg_color, 0.6);
+    color: shade (@bg_color, 0.75);
     text-shadow: 0 1 alpha (shade (@bg_color, 1.25), 0.5);
 }
 
@@ -194,7 +194,7 @@ GtkAssistant .sidebar {
  * Buttons *
  ***********/
 .button {
-    padding: 1px 2px 1px 2px;
+    padding: 2px 4px 2px 4px;
     -unico-focus-border-color: alpha (@selected_bg_color, 0.7);
     -unico-focus-fill-color: @transparent;
     -unico-focus-outer-stroke-color: alpha (@selected_bg_color, 0.2);
@@ -614,23 +614,27 @@ row:selected {
 
 .check:insensitive,
 .radio:insensitive {
-	background-image: none;
-	background-color: shade (@bg_color, 0.96);
-	border-width: 1px;
+	background-image: -gtk-gradient (linear, left top, left bottom,
+		from (shade (@bg_color, 1.02)),
+		to (shade (@bg_color, 1.07)));
+	border-width: 1;
 	border-style: solid;
+	-unico-border-gradient: -gtk-gradient (linear, left top, left bottom,
+		from (shade (@bg_color, 0.82)),
+		to (shade (@bg_color, 0.92)));
 }
 
 .check:insensitive:active,
 .radio:insensitive:active {
 	background-image: -gtk-gradient (linear, left top, left bottom,
-		from (shade (@bg_color, 0.96)),
-		to (shade (@bg_color, 0.9)));
+		from (shade (@bg_color, 1.02)),
+		to (shade (@bg_color, 1.07)));
 
-	-unico-bullet-color: shade (@bg_color, 0.6);
+	-unico-bullet-color: shade (@bg_color, 0.8);
 	-unico-bullet-outline-color: shade (@bg_color, 1.0);
 	-unico-border-gradient: -gtk-gradient (linear, left top, left bottom,
-		from (shade (@bg_color, 0.8)),
-		to (shade (@bg_color, 0.7)));
+		from (shade (@bg_color, 0.87)),
+		to (shade (@bg_color, 0.92)));
 	-unico-inner-stroke-style: custom;
 	-unico-inner-stroke-gradient: none;
 	-unico-inner-stroke-color: alpha (shade (@bg_color, 1.26), 0.2);
@@ -661,7 +665,7 @@ column-header .button:active,
 column-header .button,
 .notebook column-header .button {
     background-image: -gtk-gradient (linear,
-		left top, left bottom,
+		left bottom, left top,
 		from (shade (@listview_header_gradient_a,0.99)),
 		color-stop (0.2,shade (@listview_header_gradient_a,1.02)),
 		to (shade (@listview_header_gradient_b,1.45)));
@@ -1136,8 +1140,8 @@ GtkProgressBar.trough,
 .trough row:hover {
 	background-image: -gtk-gradient (linear,
 		left top, left bottom,
-		from (shade(@bg_color,1.02)),
-		to (shade(@bg_color,1.20)));
+		from (shade(@bg_color,0.83)),
+		to (shade(@bg_color,0.86)));
 
 	border-width: 1px;
 	border-style: solid;
@@ -1150,8 +1154,8 @@ GtkProgressBar.trough.vertical,
 .trough.vertical row:hover {
 	background-image: -gtk-gradient (linear,
 		left top, right top,
-		from (shade(@bg_color,1.05)),
-		to (shade(@bg_color,1.20)));
+		from (shade(@bg_color,0.83)),
+		to (shade(@bg_color,0.86)));
 
 	border-width: 1px;
 	border-style: solid;
