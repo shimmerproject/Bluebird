@@ -5,11 +5,15 @@ URL: http://shimmerproject.org/projects/bluebird/
 Copyright 2009–2012 Pasi Lallinaho, Simon Steinbeiß
 Bluebird is dual-licensed as GPLv2 or later and CC-BY-SA 3.0 or later.
 
+Contributors:
+ * Markus Klinga
+ * Lawand
+
 Desktop Suite for Xfce.
 Bluebird is the default theme in Xubuntu 10.10.
 
 The Bluebird desktop suite includes:
-– GTK+ themes (Contributor: Lawand)
+– GTK+ themes
 – xfwm theme
 – metacity theme (by Oleg Olegovich)
 – Wallpaper with Xubuntu branding and without, as well as the SVG source
