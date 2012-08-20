@@ -1,0 +1,14 @@
+style "bluebird-notify-button"
+{
+    fg[NORMAL] = "#000000"
+    fg[PRELIGHT] = "#000000"
+}
+
+style "bluebird-notify-window"
+{
+    XfceNotifyWindow::border-width = 0.0
+}
+
+class "XfceNotifyWindow" style "bluebird-notify-window"
+widget_class "XfceNotifyWindow.*.GtkButton*" style "bluebird-notify-button"
+
