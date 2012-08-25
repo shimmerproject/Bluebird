@@ -510,6 +510,8 @@ row:selected {
 /****************
  * Checkbuttons *
  ****************/
+.check row:selected,
+.radio row:selected,
 .check,
 .check row,
 .radio,
@@ -563,7 +565,15 @@ row:selected {
 .notebook .radio:active,
 .radio:active,
 .radio row:selected:active,
-.radio row:selected:focused:active {
+.radio row:selected:focused:active,
+.check:inconsistent,
+.check row:selected:inconsistent,
+.check row:selected:focused:inconsistent,
+.notebook .check:inconsistent,
+.notebook .radio:inconsistent,
+.radio:inconsistent,
+.radio row:selected:inconsistent,
+.radio row:selected:focused:inconsistent {
 	background-image: -gtk-gradient (linear, left top, left bottom,
 		from (shade (@selected_bg_color, 1.1)),
 		to (shade (@selected_bg_color, 0.9)));
@@ -589,8 +599,16 @@ row:selected {
 .notebook .check:active:hover,
 .notebook .radio:active:hover,
 .radio:active:hover,
+.radio row:selected:active:hover,
 .radio row:selected:focused:active:hover,
-.radio row:selected:active:hover {
+.check:active:hover:inconsistent,
+.check row:selected:active:hover:inconsistent,
+.check row:selected:focused:active:hover:inconsistent,
+.notebook .check:active:hover:inconsistent,
+.notebook .radio:active:hover:inconsistent,
+.radio:active:hover:inconsistent,
+.radio row:selected:active:hover:inconsistent,
+.radio row:selected:focused:active:hover:inconsistent{
 	background-image: -gtk-gradient (linear, left top, left bottom,
 		from (shade (@selected_bg_color, 1.1)),
 		to (shade (@selected_bg_color, 0.9)));
@@ -610,6 +628,18 @@ row:selected {
 	border-style: solid;
 }
 
+.check row:selected,
+.check row:selected:active,
+.check row:selected:focused,
+.check row:selected:focused:active,
+.radio row:selected,
+.radio row:selected:active,
+.radio row:selected:focused,
+.radio row:selected:focused:active {
+	-unico-outer-stroke-color: @transparent;
+	-unico-outer-stroke-gradient: none;
+}
+
 .check:insensitive,
 .radio:insensitive {
 	background-image: -gtk-gradient (linear, left top, left bottom,
@@ -623,7 +653,9 @@ row:selected {
 }
 
 .check:insensitive:active,
-.radio:insensitive:active {
+.radio:insensitive:active,
+.check:insensitive:inconsistent,
+.radio:insensitive:inconsistent {
 	background-image: -gtk-gradient (linear, left top, left bottom,
 		from (shade (@bg_color, 1.02)),
 		to (shade (@bg_color, 1.07)));
