@@ -479,157 +479,22 @@ row:selected {
 	color: @selected_fg_color;
 }
 
-/****************
- * Checkbuttons *
- ****************/
-.check row:selected,
-.radio row:selected,
+/*******************
+ * check and radio *
+ *******************/
 .check,
-.check row,
 .radio,
-.radio row {
-	background-image: -gtk-gradient (linear, left top, left bottom,
-		from (shade (@base_color, 0.96)),
-		color-stop (0.10, shade (@base_color, 0.98)),
-		to (@base_color));
-
-	border-color: shade (@bg_color, 0.68);
-	-unico-inner-stroke-style: custom;
-	-unico-inner-stroke-color: alpha (shade (@base_color, 0.98), 1.0);
-	border-width: 1px;
-	border-style: solid;
-}
-
-.check:hover,
-.check row:hover,
-.radio:hover,
-.radio row:hover {
-	background-image: -gtk-gradient (linear, left top, left bottom,
-		from (shade (@base_color, 0.96)),
-		color-stop (0.10, shade (@base_color, 0.98)),
-		to (@base_color));
-
-	border-color: shade (@bg_color, 0.68);
-	-unico-inner-stroke-style: custom;
-	-unico-inner-stroke-color: alpha (shade (@base_color, 0.1), 0.02);
-	border-width: 1px;
-	border-style: solid;
-}
-
-.check,
-.check row {
-	border-radius: 2px;
-}
-
-.radio,
-.radio row {
-	border-radius: 10px;
-}
-
-.check:active,
-.check row:selected:active,
-.check row:selected:focused:active,
-.notebook .check:active,
-.notebook .radio:active,
-.radio:active,
-.radio row:selected:active,
-.radio row:selected:focused:active,
-.check:inconsistent,
-.check row:selected:inconsistent,
-.check row:selected:focused:inconsistent,
-.notebook .check:inconsistent,
-.notebook .radio:inconsistent,
-.radio:inconsistent,
-.radio row:selected:inconsistent,
-.radio row:selected:focused:inconsistent {
-	background-image: -gtk-gradient (linear, left top, left bottom,
-		from (shade (@selected_bg_color, 1.1)),
-		to (shade (@selected_bg_color, 0.9)));
-
-	-unico-bullet-color: shade (@selected_fg_color, 1.0);
-	-unico-bullet-outline-color: shade (@text_color,1.2);
-	border-color: shade (@selected_bg_color, 0.7);
-	-unico-inner-stroke-style: custom;
-	-unico-inner-stroke-color: alpha (shade (@selected_bg_color, 1.56), 0.4);
-	-unico-outer-stroke-style: custom;
-	-unico-outer-stroke-gradient: -gtk-gradient (linear, left top, left bottom,
-		from (alpha (shade (@bg_color, 0.05), 0.02)),
-		to (alpha (shade (@bg_color, 0.05), 0.08)));
-	border-width: 1px;
-	border-style: solid;
-}
-
-.check:active:hover,
-.check row:selected:active:hover,
-.check row:selected:focused:active:hover,
-.notebook .check:active:hover,
-.notebook .radio:active:hover,
-.radio:active:hover,
-.radio row:selected:active:hover,
-.radio row:selected:focused:active:hover,
-.check:active:hover:inconsistent,
-.check row:selected:active:hover:inconsistent,
-.check row:selected:focused:active:hover:inconsistent,
-.notebook .check:active:hover:inconsistent,
-.notebook .radio:active:hover:inconsistent,
-.radio:active:hover:inconsistent,
-.radio row:selected:active:hover:inconsistent,
-.radio row:selected:focused:active:hover:inconsistent{
-	background-image: -gtk-gradient (linear, left top, left bottom,
-		from (shade (@selected_bg_color, 1.1)),
-		to (shade (@selected_bg_color, 0.9)));
-
-	-unico-bullet-color: shade (@selected_fg_color, 1.0);
-	-unico-bullet-outline-color: shade (@text_color, 1.2);
-	border-color: shade (@selected_bg_color, 0.7);
-	-unico-inner-stroke-style: custom;
-	-unico-inner-stroke-color: alpha (shade (@selected_bg_color, 1.56), 0.4);
-	-unico-outer-stroke-style: custom;
-	-unico-outer-stroke-gradient: -gtk-gradient (linear, left top, left bottom,
-		from (alpha (shade (@bg_color, 0.05), 0.02)),
-		to (alpha (shade (@bg_color, 0.05), 0.08)));
-	border-width: 1px;
-	border-style: solid;
-}
-
-.check row:selected,
-.check row:selected:active,
-.check row:selected:focused,
-.check row:selected:focused:active,
-.radio row:selected,
-.radio row:selected:active,
-.radio row:selected:focused,
-.radio row:selected:focused:active {
-	-unico-outer-stroke-color: @transparent;
-	-unico-outer-stroke-gradient: none;
-}
-
 .check:insensitive,
 .radio:insensitive {
-	background-image: -gtk-gradient (linear, left top, left bottom,
-		from (shade (@bg_color, 1.02)),
-		to (shade (@bg_color, 1.07)));
-	border-width: 1px;
-	border-style: solid;
-	border-color: shade (@bg_color, 0.86);
+    background-color: transparent;
+    border-style: none;
 }
 
-.check:insensitive:active,
-.radio:insensitive:active,
-.check:insensitive:inconsistent,
-.radio:insensitive:inconsistent {
-	background-image: -gtk-gradient (linear, left top, left bottom,
-		from (shade (@bg_color, 1.02)),
-		to (shade (@bg_color, 1.07)));
-
-	-unico-bullet-color: shade (@bg_color, 0.8);
-	-unico-bullet-outline-color: shade (@bg_color, 1.0);
-	border-color: shade (@bg_color, 0.9);
-	-unico-inner-stroke-style: custom;
-	-unico-inner-stroke-gradient: none;
-	-unico-inner-stroke-color: alpha (shade (@bg_color, 1.26), 0.2);
-	border-width: 1px;
-	border-style: solid;
+GtkCheckButton:hover,
+GtkCheckButton:active:hover,
+GtkCheckButton:selected,
+GtkCheckButton:selected:focus {
+    background-color: shade(@theme_bg_color, 1.05);
 }
 
 /************
