@@ -51,7 +51,8 @@
 	-GtkWidget-focus-line-width: 1px;
 	-GtkWidget-link-color: @link_color;
 	-GtkWidget-visited-link-color: @link_color;
-	-GtkWindow-resize-grip-default: true;
+	-GtkWindow-resize-grip-height: 13;
+	-GtkWindow-resize-grip-width: 13;
 	-WnckTasklist-fade-overlay-rect: 0;
 
 	border-width: 1px;
@@ -868,13 +869,6 @@ GtkLabel:insensitive {
 	border-width: 1px;
 	border-style: none;
 	-unico-inner-stroke-style: none;
-}
-
-/******************
- * resize-grip *
- ******************/
-.grip {
-/*	-unico-centroid-texture:  url("../gtk-2.0/resize_grip.png");*/
 }
 
 /*******************
