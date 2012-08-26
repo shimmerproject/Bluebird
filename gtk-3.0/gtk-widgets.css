@@ -840,8 +840,6 @@ GtkLabel:insensitive {
     border-style: none;
 }
 
-}
-
 /* menubar */
 .menubar {
 	-GtkWidget-window-dragging: true;
