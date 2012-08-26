@@ -45,8 +45,8 @@
 	-GtkTreeView-expander-size: 4;
 	-GtkTreeView-vertical-separator: 0;
 	-GtkWidget-wide-separators: 1;
-	-GtkWidget-separator-width: 2px;
-	-GtkWidget-separator-height: 2;
+	-GtkWidget-separator-width: 1px;
+	-GtkWidget-separator-height: 1px;
 	-GtkWidget-focus-padding: 0;
 	-GtkWidget-focus-line-width: 1px;
 	-GtkWidget-link-color: @link_color;
@@ -1013,7 +1013,7 @@ GtkLabel:insensitive {
 .notebook {
 	padding: 2px;
 	border-radius: 4px;
-	background-color: @bg_color;
+	background-color: shade (@base_color,0.96);
 }
 
 .notebook tab {
@@ -1402,8 +1402,6 @@ GtkComboBox .separator {
     -GtkMenuItem-horizontal-padding: 0;
     padding: 2px;
     border-color: shade (@bg_color, 0.86);
-
-    -unico-inner-stroke-color: alpha (shade (@bg_color, 1.26), 0.5);
 }
 
 /***********
