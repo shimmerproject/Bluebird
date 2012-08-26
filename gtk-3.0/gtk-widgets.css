@@ -6,8 +6,8 @@
 	-GtkButton-image-spacing: 3;
 	-GtkButton-interior-focus: true;
 	-GtkButton-inner-border: 3;
-	-GtkCheckButton-indicator-size: 14;
-	-GtkCheckMenuItem-indicator-size: 14;
+	-GtkCheckButton-indicator-size: 15;
+	-GtkCheckMenuItem-indicator-size: 12;
 	-GtkEntry-inner-border: 2;
 	-GtkEntry-progress-border: 0; 
 	-GtkExpander-expander-size: 10;   
