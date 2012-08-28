@@ -142,4 +142,5 @@
  ***************/
 .grip {
     background-image: url("assets/resize-grip.png");
+    background-color: transparent;
 }
