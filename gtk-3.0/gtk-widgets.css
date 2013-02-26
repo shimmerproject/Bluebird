@@ -505,16 +505,16 @@ column-header .button:active {
 }
 
 column-header .button {
-    border-color: shade(@theme_bg_color, 0.8);
+    border-color: shade(@theme_bg_color, 0.95);
     background-image: -gtk-gradient(linear, left top, left bottom,
-                                     from (shade(@theme_bg_color, 1.01)),
-                                     to (shade(@theme_bg_color, 0.92)));
+                                     from (shade(@theme_bg_color, 1.2)),
+                                     to (shade(@theme_bg_color, 1.06)));
 }
 
 column-header .button:hover {
     background-image: -gtk-gradient(linear, left top, left bottom,
-                                     from (shade(@theme_bg_color, 1.13)),
-                                     to (shade(@theme_bg_color, 0.97)));
+                                     from (shade(@theme_bg_color, 1.25)),
+                                     to (shade(@theme_bg_color, 1.1)));
 }
 
 column-header:last-child .button {
