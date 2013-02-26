@@ -1,6 +1,5 @@
 Gtk3 default-engine port:
  * notebooks
- * progressbar-troughs
  * menubar-menuitem highlight
  * menu-highlight
  * column header
