@@ -1,5 +1,4 @@
 Gtk3 default-engine port:
- * check/radio buttons
  * notebooks
  * progressbar-troughs
  * menubar-menuitem highlight
