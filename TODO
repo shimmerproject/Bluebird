@@ -1,4 +1,3 @@
 Gtk3 default-engine port:
- * notebooks
  * button border-radius and active state
  * default button
