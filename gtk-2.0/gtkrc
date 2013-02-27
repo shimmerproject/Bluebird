@@ -279,7 +279,7 @@ style "murrine-menu"
 	base[NORMAL]      = @bg_color # Color for menu-item radio/checks background.
 	text[PRELIGHT]    = @selected_fg_color
 	text[SELECTED]    = @selected_fg_color
-	text[ACTIVE]      = @selected_fg_color
+	text[ACTIVE]      = @fg_color
 	text[INSENSITIVE] = @text_color
 	
 	engine "murrine" 
