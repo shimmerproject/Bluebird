@@ -42,25 +42,10 @@
     border-image: url("assets/button-active.png") 7 / 7px stretch;
 }
 
-
-.button:active:hover,
-.button.default:active:hover,
-.toolbar .button:active:hover,
-.inline.toolbar .button:active:hover {
-    border-image: url("assets/button-active-hover.png") 7 / 7px stretch;
-}
-
 .button:active:focus,
 .button.default:active:focus,
 .inline.toolbar .button:active:focus {
     border-image: url("assets/button-active-focused.png") 7 / 7px stretch;
-}
-
-.button:active:hover:focus,
-.button.default:active:hover:focus,
-.toolbar .button:active:hover:focus,
-.inline.toolbar .button:active:hover:focus {
-    border-image: url("assets/button-active-focused-hover.png") 7 / 7px stretch;
 }
 
 .button:insensitive,

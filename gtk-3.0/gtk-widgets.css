@@ -215,7 +215,6 @@ GtkAssistant .sidebar {
 .button {
     border-width: 3px;
     border-style: solid;
-    border-color: transparent;
     border-color: shade(@theme_bg_color, 0.8);
     border-radius: 5px;
     background-image: -gtk-gradient(linear, left top, left bottom,
@@ -226,10 +225,10 @@ GtkAssistant .sidebar {
 }
 
 .button:hover {
+    border-color: shade(@theme_bg_color, 0.7);
     background-image: -gtk-gradient(linear, left top, left bottom,
                                      from (shade(shade(@theme_selected_bg_color, 1.45), 1.1)),
                                      to (shade(shade(@theme_selected_bg_color, 1.45), 0.95)));
-    border-color: shade(@theme_bg_color, 0.7);
 }
 
 .button:active {
@@ -239,8 +238,17 @@ GtkAssistant .sidebar {
                                      to (shade(shade(@theme_bg_color, 0.85), 0.95)));
 }
 
-.button:active:hover,
-.button:focus {
+.button:active:hover {
+    border-color: shade(@theme_bg_color, 0.7);
+    background-image: -gtk-gradient(linear, left top, left bottom,
+                                     from (shade(shade(@theme_selected_bg_color, 1.45), 1.1)),
+                                     to (shade(shade(@theme_selected_bg_color, 1.45), 0.95)));
+}
+
+.button:focus,
+.button:hover:focus,
+.button:active:focus,
+.button:active:hover:focus {
     border-color: shade(@theme_bg_color, 0.7);
 }
 
@@ -260,21 +268,21 @@ GtkAssistant .sidebar {
 
 /* default button */
 .button.default {
-    border-color: shade(@theme_selected_bg_color, 0.8);
+    border-color: shade(@theme_bg_color, 0.7);
     background-image: -gtk-gradient(linear, left top, left bottom,
-                                     from (shade(shade(@theme_selected_bg_color, 1.02), 1.1)),
-                                     to (shade(shade(@theme_selected_bg_color, 1.02), 0.9)));
+                                     from (shade(shade(@theme_selected_bg_color, 1.50), 1.1)),
+                                     to (shade(shade(@theme_selected_bg_color, 1.50), 0.95)));
 }
 
 .button.default:hover {
-    border-color: shade(@theme_selected_bg_color, 0.7);
+    border-color: shade(@theme_bg_color, 0.7);
+    background-image: -gtk-gradient(linear, left top, left bottom,
+                                     from (shade(shade(@theme_selected_bg_color, 1.45), 1.1)),
+                                     to (shade(shade(@theme_selected_bg_color, 1.45), 0.95)));
 }
 
 .button.default:active {
     border-color: shade(@theme_selected_bg_color, 0.8);
-    background-image: -gtk-gradient(linear, left top, left bottom,
-                                     from (shade(shade(@theme_selected_bg_color, 1.02), 0.9)),
-                                     to (shade(shade(@theme_selected_bg_color, 1.02), 0.95)));
 }
 
 .button.default:active:hover {
@@ -288,14 +296,7 @@ GtkAssistant .sidebar {
 .linked .button:active:hover,
 .linked .button:focus,
 .linked .button:focus:active,
-.linked .button:insensitive,
-.toolbar .linked .entry,
-.toolbar .linked .button,
-.toolbar .linked .button:active,
-.toolbar .linked .button:active:hover,
-.toolbar .linked .button:focus,
-.toolbar .linked .button:focus:active,
-.toolbar .linked .button:insensitive {
+.linked .button:insensitive {
     border-width: 3px;
     border-right-width: 0;
     border-left-width: 0;
@@ -309,14 +310,7 @@ GtkAssistant .sidebar {
 .linked .button:active:hover:first-child,
 .linked .button:focus:first-child,
 .linked .button:focus:active:first-child,
-.linked .button:insensitive:first-child,
-.toolbar .linked .entry:first-child,
-.toolbar .linked .button:first-child,
-.toolbar .linked .button:active:first-child,
-.toolbar .linked .button:active:hover:first-child,
-.toolbar .linked .button:focus:first-child,
-.toolbar .linked .button:focus:active:first-child,
-.toolbar .linked .button:insensitive:first-child {
+.linked .button:insensitive:first-child {
     border-width: 3px;
     border-right-width: 0;
     border-radius: 5px;
@@ -331,14 +325,7 @@ GtkAssistant .sidebar {
 .linked .button:active:hover:last-child,
 .linked .button:focus:last-child,
 .linked .button:focus:active:last-child,
-.linked .button:insensitive:last-child,
-.toolbar .linked .entry:last-child,
-.toolbar .linked .button:last-child,
-.toolbar .linked .button:active:last-child,
-.toolbar .linked .button:active:hover:last-child,
-.toolbar .linked .button:focus:last-child,
-.toolbar .linked .button:focus:active:last-child,
-.toolbar .linked .button:insensitive:last-child {
+.linked .button:insensitive:last-child {
     border-width: 3px;
     border-left-width: 0;
     border-radius: 5px;
@@ -353,14 +340,7 @@ GtkAssistant .sidebar {
 .linked .button:active:hover:only-child,
 .linked .button:focus:only-child,
 .linked .button:focus:active:only-child,
-.linked .button:insensitive:only-child,
-.toolbar .linked .entry:only-child,
-.toolbar .linked .button:only-child,
-.toolbar .linked .button:active:only-child,
-.toolbar .linked .button:active:hover:only-child,
-.toolbar .linked .button:focus:only-child,
-.toolbar .linked .button:focus:active:only-child,
-.toolbar .linked .button:insensitive:only-child {
+.linked .button:insensitive:only-child {
     border-width: 3px;
     border-radius: 5px;
 }
@@ -372,14 +352,7 @@ GtkAssistant .sidebar {
 .linked.vertical .button:active:hover,
 .linked.vertical .button:focus,
 .linked.vertical .button:focus:active,
-.linked.vertical .button:insensitive,
-.toolbar .linked.vertical .entry,
-.toolbar .linked.vertical .button,
-.toolbar .linked.vertical .button:active,
-.toolbar .linked.vertical .button:active:hover,
-.toolbar .linked.vertical .button:focus,
-.toolbar .linked.vertical .button:focus:active,
-.toolbar .linked.vertical .button:insensitive {
+.linked.vertical .button:insensitive {
     border-width: 3px;
     border-bottom-width: 0;
     border-top-width: 0;
@@ -393,14 +366,7 @@ GtkAssistant .sidebar {
 .linked.vertical .button:active:hover:first-child,
 .linked.vertical .button:focus:first-child,
 .linked.vertical .button:focus:active:first-child,
-.linked.vertical .button:insensitive:first-child,
-.toolbar .linked.vertical .entry:first-child,
-.toolbar .linked.vertical .button:first-child,
-.toolbar .linked.vertical .button:active:first-child,
-.toolbar .linked.vertical .button:active:hover:first-child,
-.toolbar .linked.vertical .button:focus:first-child,
-.toolbar .linked.vertical .button:focus:active:first-child,
-.toolbar .linked.vertical .button:insensitive:first-child {
+.linked.vertical .button:insensitive:first-child {
     border-width: 3px;
     border-bottom-width: 0;
     border-radius: 5px;
@@ -415,14 +381,7 @@ GtkAssistant .sidebar {
 .linked.vertical .button:active:hover:last-child,
 .linked.vertical .button:focus:last-child,
 .linked.vertical .button:focus:active:last-child,
-.linked.vertical .button:insensitive:last-child,
-.toolbar .linked.vertical .entry:last-child,
-.toolbar .linked.vertical .button:last-child,
-.toolbar .linked.vertical .button:active:last-child,
-.toolbar .linked.vertical .button:active:hover:last-child,
-.toolbar .linked.vertical .button:focus:last-child,
-.toolbar .linked.vertical .button:focus:active:last-child,
-.toolbar .linked.vertical .button:insensitive:last-child {
+.linked.vertical .button:insensitive:last-child {
     border-width: 3px;
     border-top-width: 0;
     border-radius: 5px;
@@ -437,14 +396,7 @@ GtkAssistant .sidebar {
 .linked.vertical .button:active:hover:only-child,
 .linked.vertical .button:focus:only-child,
 .linked.vertical .button:focus:active:only-child,
-.linked.vertical .button:insensitive:only-child,
-.toolbar .linked.vertical .entry:only-child,
-.toolbar .linked.vertical .button:only-child,
-.toolbar .linked.vertical .button:active:only-child,
-.toolbar .linked.vertical .button:active:hover:only-child,
-.toolbar .linked.vertical .button:focus:only-child,
-.toolbar .linked.vertical .button:focus:active:only-child,
-.toolbar .linked.vertical .button:insensitive:only-child {
+.linked.vertical .button:insensitive:only-child {
     border-width: 3px;
     border-radius: 5px;
 }
@@ -562,7 +514,7 @@ GtkCalendar {
 }
 
 GtkCalendar:inconsistent {
-    color: alpha(@theme_fg_color, 0.6);
+    color: mix(@theme_fg_color, @theme_bg_color, 0.5);
 }
 
 GtkCalendar.view {
@@ -585,6 +537,7 @@ GtkCalendar.header {
 }
 
 GtkCalendar.button,
+GtkCalendar.button:hover,
 GtkCalendar.button:insensitive {
     border-width: 0;
     background-color: transparent;
@@ -595,7 +548,6 @@ GtkCalendar.button:insensitive {
 GtkCalendar.highlight {
     border-width: 0;
     background-color: transparent;
-    color: shade(@theme_fg_color, 0.6);
 }
 
 /******************
@@ -643,6 +595,7 @@ GtkComboBox.combobox-entry .button:insensitive {
     color: @theme_text_color;
 }
 
+.entry:active,
 .entry:focus {
     border-color: shade(@theme_selected_bg_color, 0.8);
 }
@@ -1021,6 +974,10 @@ GtkTreeMenu .menuitem * {
 .menuitem.radio:active {
     border-style: none;
     background-color: transparent;
+}
+
+.menuitem GtkCalendar:inconsistent {
+    color: mix(@menu_fg_color, @menu_bg_color, 0.5);
 }
 
 .menuitem GtkCalendar.button {
@@ -1460,9 +1417,28 @@ GtkScrolledWindow GtkViewport.frame {
     border-color: @theme_bg_color;
 }
 
+.toolbar .button .separator,
+.toolbar .button.separator,
+.primary-toolbar .button .separator,
+.primary-toolbar .button.separator {
+    border-color: shade(@toolbar_bg_color, 0.9);
+}
+
+.toolbar .button .separator:insensitive,
+.toolbar .button.separator:insensitive,
+.primary-toolbar .button .separator:insensitive,
+.primary-toolbar .button.separator:insensitive {
+    border-color: @toolbar_bg_color;
+}
+
 .menuitem.separator {
     -GtkMenuItem-horizontal-padding: 0;
     -GtkWidget-separator-height: 1;
+
+    border-image: -gtk-gradient(linear,
+                     left top, left bottom,
+                     from (shade(@menu_bg_color, 0.9)),
+                     to (shade(@menu_bg_color, 0.9))) 1;
 
     border-color: shade(@menu_bg_color, 0.9);
     color: shade(@menu_bg_color, 0.9);
@@ -1771,8 +1747,10 @@ GtkTextView {
 }
 
 .primary-toolbar GtkComboBox,
+.primary-toolbar GtkComboBox .cell 
 .primary-toolbar .button *,
-.primary-toolbar .button {
+.primary-toolbar .button,
+.toolbar GtkComboBox .cell {
     padding: 2px;
     border-width: 3px;
     border-color: transparent;
@@ -1795,7 +1773,8 @@ GtkTextView {
 }
 
 .primary-toolbar .button:hover,
-.toolbar .button:hover {
+.toolbar .button:hover,
+.toolbar GtkComboBox .cell:hover {
     background-image: -gtk-gradient(linear, left top, left bottom,
                                      from (shade(shade(@theme_selected_bg_color, 1.45), 1.1)),
                                      to (shade(shade(@theme_selected_bg_color, 1.45), 0.95)));
@@ -1812,6 +1791,20 @@ GtkTextView {
 
 .primary-toolbar .button:active:hover,
 .toolbar .button:active:hover {
+    border-color: shade(@toolbar_bg_color, 0.7);
+    background-image: -gtk-gradient(linear, left top, left bottom,
+                                     from (shade(shade(@theme_selected_bg_color, 1.45), 1.1)),
+                                     to (shade(shade(@theme_selected_bg_color, 1.45), 0.95)));
+}
+
+.primary-toolbar .button:focus,
+.primary-toolbar .button:hover:focus,
+.primary-toolbar .button:active:focus,
+.primary-toolbar .button:active:hover:focus,
+.toolbar .button:focus,
+.toolbar .button:hover:focus,
+.toolbar .button:active:focus,
+.toolbar .button:active:hover:focus {
     border-color: shade(@toolbar_bg_color, 0.7);
 }
 
@@ -1873,6 +1866,7 @@ GtkTextView {
     padding: 1px;
     border-width: 3px 0 3px 3px;
     border-style: solid;
+    border-color: shade(@theme_bg_color, 0.8);
     border-radius: 0;
     background-image: -gtk-gradient(linear, left top, left bottom,
                                      from (shade(shade(@theme_bg_color, 1.06), 1.1)),
