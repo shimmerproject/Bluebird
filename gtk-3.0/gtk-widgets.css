@@ -548,6 +548,7 @@ GtkCalendar.button:insensitive {
 GtkCalendar.highlight {
     border-width: 0;
     background-color: transparent;
+    color: mix(@theme_fg_color, @theme_bg_color, 0.5);
 }
 
 /******************
@@ -986,11 +987,22 @@ GtkTreeMenu .menuitem * {
     background-image: none;
 }
 
+.menuitem GtkCalendar.highlight {
+    border-width: 0;
+    background-color: transparent;
+    color: mix(@menu_fg_color, @menu_bg_color, 0.5);
+}
+
 .menuitem .entry {
     border-color: shade(@menu_bg_color, 0.7);
     background-color: @menu_bg_color;
     background-image: none;
     color: @menu_fg_color;
+}
+
+.menuitem .entry:active,
+.menuitem .entry:focus {
+    border-color: shade(@theme_selected_bg_color, 0.8);
 }
 
 .menuitem .accelerator {
