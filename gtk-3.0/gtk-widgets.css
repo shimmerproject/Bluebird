@@ -474,6 +474,49 @@ column-header:last-child .button {
 }
 
 /****************
+ * content view *
+ ****************/
+.content-view.view {
+    background-color: @theme_base_color;
+}
+
+.content-view.view:prelight {
+    background-color: alpha(@theme_selected_bg_color, 0.6);
+}
+
+.content-view.view:selected,
+.content-view.view:active {
+    background-color: @theme_selected_bg_color;
+}
+
+.content-view.view:insensitive {
+    background-color: shade(@theme_base_color, 0.9);
+}
+
+GdMainIconView.content-view {
+    -GdMainIconView-icon-size: 40;
+}
+
+GtkIconView.content-view.check {
+    background-color: transparent;
+}
+
+GtkIconView.content-view.check:active {
+    background-color: transparent;
+}
+
+.content-view.view.check,
+.content-view.view.check:active {
+    background-color: transparent;
+}
+
+GtkIconView.content-view.check:prelight,
+GtkIconView.content-view.check:insensitive,
+GtkIconView.content-view.check:selected {
+    background-color: transparent;
+}
+
+/****************
  * drawing area *
  ****************/
 GtkDrawingArea {
@@ -894,7 +937,7 @@ GtkComboBox .menu {
 .menubar {
     -GtkWidget-window-dragging: true;
 
-    border-width: 0;
+    border-style: none;
     background-color: @menubar_bg_color;
     background-image: none;
     color: @menubar_fg_color;
@@ -905,8 +948,13 @@ GtkComboBox .menu {
  ***************/
 .menubar.menuitem,
 .menubar .menuitem {
-    padding: 3px;
-    border-width: 1px 1px 0 1px;
+    padding: 3px 4px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: transparent;
+    background-color: @menubar_bg_color;
+    background-image: none;
+    color: @menubar_fg_color; 
 }
 
 .menubar.menuitem:hover,
@@ -936,7 +984,11 @@ GtkTreeMenu .menuitem * {
     padding: 2px;
     border-width: 1px;
     border-style: solid;
+    border-color: transparent;
     border-radius: 0;
+    background-color: shade(@menu_bg_color, 1.18);
+    background-image: none;
+    color: @menu_fg_color;
 }
 
 .menu .menuitem:active,
@@ -1043,6 +1095,7 @@ GtkTreeMenu .menuitem * {
     background-image: -gtk-gradient(linear, left top, left bottom,
                                      from (shade(@theme_bg_color, 1.07)),
                                      to (shade(@theme_bg_color, 1.07)));
+    background-image: none;
 }
 
 .notebook tab GtkLabel {
@@ -1792,8 +1845,7 @@ GtkTextView {
 }
 
 .primary-toolbar .button:hover,
-.toolbar .button:hover,
-.toolbar GtkComboBox .cell:hover {
+.toolbar .button:hover {
     background-image: -gtk-gradient(linear, left top, left bottom,
                                      from (shade(shade(@theme_selected_bg_color, 1.45), 1.1)),
                                      to (shade(shade(@theme_selected_bg_color, 1.45), 0.95)));
@@ -2047,10 +2099,6 @@ GtkTreeView .entry {
 /************
  * viewport *
  ************/
-GtkViewport {
-    background-color: transparent;
-}
-
 GtkViewport.frame {
     border-width: 0;
 }
