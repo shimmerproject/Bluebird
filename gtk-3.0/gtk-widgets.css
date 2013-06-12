@@ -1079,6 +1079,7 @@ GtkTreeMenu .menuitem * {
     border-radius: 5px;
     background-color: shade(@theme_bg_color, 1.07);
     background-image: none;
+    background-clip: border-box;
 }
 
 .notebook tab {
