@@ -4,13 +4,13 @@
 # Description: As is the original theme, this theme is 100% free and open source.
 
 # These are the defined colors for the theme, you can change them in GNOME's appearance preferences.
-gtk_color_scheme = "bg_color:#DCDCDC\nselected_bg_color:#7E9EBD\nbase_color:#F7F7F7" # Background, base.
-gtk_color_scheme = "fg_color:#3C3C3C\nselected_fg_color:#f5f5f5\ntext_color:#3C3C3C" # Foreground, text.
-gtk_color_scheme = "tooltip_bg_color:#000000\ntooltip_fg_color:#E1E1E1" # Tooltips.
-gtk_color_scheme = "link_color:#08c" # Hyperlinks
-gtk_color_scheme = "panel_bg:#303030" # Panel bg color. Not used here though.
-gtk_color_scheme = "fm_color:#F7F7F7" # Color used in Nautilus and Thunar.
-gtk_color_scheme = "frame_color:#CDCDCD\ninactive_frame_color:#CDCDCD" # Fix for Chrome
+gtk-color-scheme = "bg_color:#DCDCDC\nselected_bg_color:#7E9EBD\nbase_color:#F7F7F7" # Background, base.
+gtk-color-scheme = "fg_color:#3C3C3C\nselected_fg_color:#f5f5f5\ntext_color:#3C3C3C" # Foreground, text.
+gtk-color-scheme = "tooltip_bg_color:#000000\ntooltip_fg_color:#E1E1E1" # Tooltips.
+gtk-color-scheme = "link_color:#08c" # Hyperlinks
+gtk-color-scheme = "panel_bg:#303030" # Panel bg color. Not used here though.
+gtk-color-scheme = "fm_color:#F7F7F7" # Color used in Nautilus and Thunar.
+gtk-color-scheme = "frame_color:#CDCDCD\ninactive_frame_color:#CDCDCD" # Fix for Chrome
 
 ### EXTERNAL FILES ###
 include "panel.rc"       # This includes the file that handles panel theming.
