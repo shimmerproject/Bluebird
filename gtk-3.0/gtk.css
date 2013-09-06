@@ -42,8 +42,8 @@
 @define-color toolbar_fg_color @theme_fg_color;
 @define-color menu_bg_color @theme_bg_color;
 @define-color menu_fg_color @theme_fg_color;
-@define-color panel_bg_color @theme_bg_color;
-@define-color panel_fg_color @theme_fg_color;
+@define-color panel_bg_color #212936;
+@define-color panel_fg_color #f7f7f7;
 
 /* osd */
 @define-color osd_base #333;
@@ -66,3 +66,4 @@
 @import url("gtk-widgets-assets.css");
 @import url("apps/gnome-applications.css");
 @import url("apps/unity.css");
+@import url("apps/xfce.css");
