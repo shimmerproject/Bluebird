@@ -55,7 +55,8 @@
 @define-color backdrop_selected_fg_color @theme_fg_color;
 
 /* window manager colors */
-@define-color wm_bg @theme_bg_color;
+@define-color wm_bg_a shade(@theme_bg_color, 1.07);
+@define-color wm_bg_b @theme_bg_color;
 @define-color wm_title_focused mix(@theme_fg_color, @theme_bg_color, 0.1);
 @define-color wm_title_unfocused mix(@theme_fg_color, @theme_bg_color, 0.6);
 @define-color wm_border_focused shade(@theme_bg_color, 0.7);
