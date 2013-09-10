@@ -142,3 +142,18 @@ GtkIconView.content-view.cell.check:active {
 .grip {
     background-image: url("assets/resize-grip.png");
 }
+
+/******************
+ * pane separator *
+ ******************/
+.pane-separator.horizontal {
+    background-image: url("assets/pane-separator.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.pane-separator.vertical {
+    background-image: url("assets/pane-separator-vertical.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+}
