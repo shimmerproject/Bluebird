@@ -9,6 +9,11 @@ XfceHeading {
     background-color: @panel_bg_color;
 }
 
+.xfce4-panel .button {
+    border-radius: 0;
+    padding: 1;
+}
+
 .xfce4-panel .button:active {
     border-color: shade(@panel_bg_color, 1.2);
     background-image: -gtk-gradient(linear, left top, left bottom,
@@ -19,8 +24,8 @@ XfceHeading {
                 inset 0 1px alpha(black, 0.25);
 }
 
-.xfce4-panel *:hover,
-.xfce4-panel *:active:hover {
+.xfce4-panel .button:hover,
+.xfce4-panel .button:active:hover {
     border-color: shade(@selected_bg_color, 0.95);
     border-radius: 0;
     background-image: -gtk-gradient(linear, left top, left bottom,
@@ -38,9 +43,7 @@ XfceHeading {
     color: @menu_fg_color;
 }
 
-.xfce4-panel .menu *:hover,
-.xfce4-panel .menu GtkLabel:hover,
-.xfce4-panel .menu GtkImage:hover {
+.xfce4-panel .menu *:hover {
     background-image: -gtk-gradient(linear, left top, left bottom,
                                      from (shade(@theme_selected_bg_color, 1.2)),
                                      to (shade(@theme_selected_bg_color, 1.0)));
@@ -48,9 +51,8 @@ XfceHeading {
     transition: none;
 }
 
-/* workaround to fix size of indicator-icons */
-XfceIndicatorBox .button {
-    border: 1px;
-    padding: 0;
-    color: @panel_fg_color;
+.xfce4-panel .menu GtkLabel:hover,
+.xfce4-panel .menu GtkImage:hover {
+    background-image: none;
+    background-color: transparent;
 }
