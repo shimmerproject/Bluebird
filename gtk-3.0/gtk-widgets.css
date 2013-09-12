@@ -3189,8 +3189,9 @@ GtkBubbleWindow .toolbar {
 .titlebar {
     border-radius: 5px 5px 0 0;
     background-image: -gtk-gradient(linear, left top, left bottom,
-                                     from (@wm_bg_a),
-                                     to (shade(@wm_bg_b, 0.9)));
+                                     from (shade(@toolbar_bg_color, 1.0)),
+                                     to (shade(@toolbar_bg_color, 0.9)));
+
     text-shadow: none;
 }
 
@@ -3209,8 +3210,9 @@ GtkBubbleWindow .toolbar {
 
 .titlebar:backdrop {
     background-image: -gtk-gradient(linear, left top, left bottom,
-                                     from (shade(@wm_bg_a, 0.97)),
-                                     to (shade(@wm_bg_b, 0.9)));
+                                     from (shade(@toolbar_bg_color, 0.97)),
+                                     to (shade(@@toolbar_bg_color, 0.9)));
+
     text-shadow: none;
 }
 
@@ -3219,7 +3221,7 @@ GtkBubbleWindow .toolbar {
     border-style: none;
     border-image: none;
     background: none;
-    color: mix(@theme_fg_color, @theme_bg_color, 0.3);
+    color: mix(@toolbar_fg_color, @toolbar_bg_color, 0.3);
     box-shadow: none;
 }
 
@@ -3227,7 +3229,7 @@ GtkBubbleWindow .toolbar {
 .titlebar .titlebutton:hover:focus {
     border-image: none;
     background: none;
-    color: mix(@theme_fg_color, @theme_bg_color, 0.2);
+    color: mix(@toolbar_fg_color, @toolbar_bg_color, 0.2);
     box-shadow: none;
 }
 
@@ -3235,20 +3237,20 @@ GtkBubbleWindow .toolbar {
 .titlebar .titlebutton:active:hover {
     border-image: none;
     background: none;
-    color: mix(@theme_fg_color, @theme_bg_color, 0.1);
+    color: mix(@toolbar_fg_color, @toolbar_bg_color, 0.1);
     box-shadow: none;
 }
 
 /*
 .titlebar .right .titlebutton:first-child {
-    border-left: 1px solid shade(@theme_bg_color, 0.9);
+    border-left: 1px solid shade(@toolbar_bg_color, 0.9);
 }
 
 .titlebar .right .titlebutton:last-child {
 }
 
 .titlebar .left .titlebutton:last-child {
-    border-right: 1px solid shade(@theme_bg_color, 0.9);
+    border-right: 1px solid shade(@toolbar_bg_color, 0.9);
 }
 
 .titlebar .left .titlebutton:first-child {
@@ -3257,7 +3259,7 @@ GtkBubbleWindow .toolbar {
 
 .titlebar .titlebutton:backdrop {
     background-image: none;
-    color: mix(@theme_fg_color, @theme_bg_color, 0.5);
+    color: mix(@toolbar_fg_color, @toolbar_bg_color, 0.5);
 }
 
 .window-frame {
