@@ -521,6 +521,7 @@ GtkComboBox.combobox-entry .button:insensitive {
     background-image: -gtk-gradient(linear, left top, left bottom,
                                      from (shade(@theme_base_color, 0.97)),
                                      to (@theme_base_color));
+    background-color: @theme_base_color;
 
     color: @theme_text_color;
 }
