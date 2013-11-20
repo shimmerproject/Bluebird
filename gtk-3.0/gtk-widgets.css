@@ -3265,7 +3265,7 @@ GtkBubbleWindow .toolbar {
 .titlebar:backdrop {
     background-image: -gtk-gradient(linear, left top, left bottom,
                                      from (shade(@toolbar_bg_color, 0.97)),
-                                     to (shade(@@toolbar_bg_color, 0.9)));
+                                     to (shade(@toolbar_bg_color, 0.9)));
 
     text-shadow: none;
 }
