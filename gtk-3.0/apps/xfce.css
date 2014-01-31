@@ -43,4 +43,5 @@ XfceHeading {
 
 .xfce4-panel .menu {
     text-shadow: none;
+    -gtk-image-effect: none;
 }
