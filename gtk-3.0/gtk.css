@@ -36,6 +36,8 @@
 @define-color error_color #cc0000;
 
 /* widget colors */
+@define-color titlebar_bg_color @theme_bg_color;
+@define-color titlebar_fg_color @theme_fg_color;
 @define-color menubar_bg_color #4e7aa9;
 @define-color menubar_fg_color #ffffff;
 @define-color toolbar_bg_color @theme_bg_color;
@@ -49,10 +51,6 @@
 @define-color osd_base #333;
 @define-color osd_fg #eee;
 @define-color osd_bg alpha(@osd_base, 0.8);
-
-/* backdrop colors */
-@define-color backdrop_selected_bg_color shade (@theme_bg_color, 0.9);
-@define-color backdrop_selected_fg_color @theme_fg_color;
 
 /* window manager colors */
 @define-color wm_bg_a shade(@theme_bg_color, 1.07);
