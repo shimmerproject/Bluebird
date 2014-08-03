@@ -437,6 +437,30 @@ style "murrine-toolbar"
 	bg[NORMAL] = @bg_color
 }
 
+style "xfwm-tabwin" = "murrine-dark"
+{
+	Xfwm4TabwinWidget::border-width = 1
+        Xfwm4TabwinWidget::border-alpha = 1.0
+	Xfwm4TabwinWidget::icon-size = 64
+	Xfwm4TabwinWidget::listview-icon-size = 16
+        Xfwm4TabwinWidget::alpha = 1.0
+        Xfwm4TabwinWidget::border-radius = 10
+
+	bg[NORMAL]	= shade (0.35, @bg_color)
+	bg[ACTIVE]	= shade (0.65, @selected_bg_color)
+	bg[PRELIGHT]	= shade (0.85, @selected_bg_color)
+	bg[SELECTED]	= @fg_color
+	
+	fg[NORMAL]	= shade (0.8, @base_color)
+	fg[ACTIVE]	= @base_color
+	fg[PRELIGHT]	= @base_color
+
+	engine "murrine" {
+		textstyle = 1
+		text_shade = 0.25
+	}
+}
+
 ###############################################################################
 # The following part of the gtkrc applies the different styles to the widgets.
 ###############################################################################
@@ -559,7 +583,7 @@ widget_class "*<GtkListItem>*" style "murrine-fg-is-text-color-workaround"
 widget_class "*<GtkCList>" style "murrine-fg-is-text-color-workaround"
 widget_class "*<EelEditableLabel>" style "murrine-fg-is-text-color-workaround"
 
-widget "xfwm4-tabwin*" style "murrine-dark"
+widget "xfwm4-tabwin*" style "xfwm-tabwin"
 
 # Makes the text in the toolbar and statusbar smaller. Remove if you want to use the default size.
 style "smaller-text"
