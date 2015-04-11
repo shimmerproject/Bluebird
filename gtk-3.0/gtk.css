@@ -8,7 +8,7 @@
 @define-color tooltip_bg_color #000000;
 @define-color tooltip_fg_color #ffffff;
 @define-color desktop_item_fg #eeeeee;
-@define-color desktop_item_text_shadow alpha(black, 0.8)
+@define-color desktop_item_text_shadow alpha(black, 0.8);
 
 /* colormap actually used by the theme, to be overridden in other css files */
 @define-color theme_bg_color @bg_color;
