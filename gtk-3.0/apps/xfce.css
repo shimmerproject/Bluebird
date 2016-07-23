@@ -7,19 +7,25 @@ XfceHeading {
 
 .xfce4-panel {
     background-color: @panel_bg_color;
+    color: @panel_fg_color;
     font: normal;
 }
 
 .xfce4-panel .button {
+    background-image: none;
+    background-color: transparent;
+    border-color: transparent;
     border-radius: 0;
-    padding: 2px;
+    box-shadow: none;
+    padding: 0 2px;
     color: @panel_fg_color;
     border: 1px;
     border-image: none;
     text-shadow: 0px 1px alpha(@dark_shadow, 1.0);
 }
 
-.xfce4-panel .button:active {
+.xfce4-panel .button:active,
+.xfce4-panel .button:checked {
     border-color: shade(@panel_bg_color, 0.8);
     background-image: -gtk-gradient(linear, left top, left bottom,
                                      from (shade(@panel_bg_color, 0.6)),
@@ -28,7 +34,8 @@ XfceHeading {
 }
 
 .xfce4-panel .button:hover,
-.xfce4-panel .button:active:hover {
+.xfce4-panel .button:active:hover,
+.xfce4-panel .button:checked:hover {
     border-color: shade(#16364d, 0.95);
     background-image: -gtk-gradient(linear, left top, left bottom,
                                      from (shade(#16364d, 1.05)),
