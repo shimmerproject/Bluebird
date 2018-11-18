@@ -20,10 +20,22 @@ The Bluebird desktop suite includes:
 - xfwm theme
 - metacity theme (by Oleg Olegovich)
 
+The Gtk+3 theme uses the builtin engine and consequently has no dependencies.
+
+### Build dependencies ###
+Debian or Ubuntu:
+
+`sudo apt install autoconf libgdk-pixbuf2.0-dev libglib2.0-bin librsvg2-dev ruby-sass sassc`
+
+Fedora:
+
+`dnf install gdk-pixbuf2-devel librsvg2-devel rubygem-sass`
+
 ### Install without admin privileges
 
 ```
 ./autogen.sh --prefix=$HOME/.local
+make
 make install
 ```
 
@@ -31,4 +43,6 @@ make install
 
 ```
 ./autogen.sh
+make
 sudo make install
+```
