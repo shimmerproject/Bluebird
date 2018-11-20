@@ -487,7 +487,7 @@ class "GtkHScrollbar"  style "murrine-scrollbar"
 class "GtkRadio*"	style "murrine-radiocheck"
 class "GtkCheck*"	style "murrine-radiocheck"
 
-# General matching following, the order is choosen so that the right styles override each other eg. progressbar needs to be more important then the menu match.
+# General matching following, the order is chosen so that the right styles override each other eg. progressbar needs to be more important then the menu match.
 
 # This is not perfect, it could be done better (That is modify *every* widget in the notebook, and change those back that we really don't want changed)
 widget_class "*<GtkNotebook>*<GtkEventBox>"     style "murrine-notebook-bg"
