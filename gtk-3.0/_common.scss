@@ -2206,14 +2206,14 @@ notebook {
 
       &:checked {
         color: $fg_color;
-        background-color: shade($bg_color, 1.05);
+        background-color: shade($bg_color, 1.09);
         border-width: 1px 1px 0 1px;
         &:backdrop {
           background-color: $bg_color;
         }
         &.reorderable-page {
           border-color: transparentize($borders_color, 0.5);
-          background-color: shade($bg_color, 1.05);
+          background-color: shade($bg_color, 1.09);
         }
       }
 
@@ -2317,7 +2317,7 @@ notebook {
   }
 
   > stack:not(:only-child) { // the :not(:only-child) is for "hidden" notebooks
-    background-color: shade($bg_color, 1.05);
+    background-color: shade($bg_color, 1.09);
     border-width: 1px;
     border-color: shade($bg_color, 0.9);
     border-style: solid;

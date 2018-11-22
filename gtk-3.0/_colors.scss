@@ -2,15 +2,15 @@
 // it gets @if ed depending on $variant
 
 
-$base_color: if($variant == 'light', #fcfcfc, #292929);
+$base_color: if($variant == 'light', #f7f7f7, #292929);
 $text_color: if($variant == 'light', #212121, white);
-$bg_color: if($variant == 'light', #cecece, #393f3f);
+$bg_color: if($variant == 'light', #dcdcdc, #393f3f);
 $mb_bg_color: #4e7aa9;
 $fg_color: if($variant == 'light', #3c3c3c, #eeeeec);
 $mb_fg_color: #ffffff;
 
-$selected_fg_color: #ffffff;
-$selected_bg_color: if($variant == 'light', #7797b5, darken(#7797b5,20%));
+$selected_fg_color: #f5f5f5;
+$selected_bg_color: if($variant == 'light', #7e9ebd, darken(#7797b5,20%));
 $mb_selected_bg_color: #7e9ebd;
 $selected_borders_color: if($variant== 'light', darken($selected_bg_color, 30%), darken($selected_bg_color, 20%));
 $borders_color: if($variant == 'light', darken($bg_color,30%), darken($bg_color,12%));
@@ -50,8 +50,8 @@ $shadow_color: transparentize(black, 0.9);
 
 $drop_target_color: #4e9a06;
 
-$panel_bg_color: #466586;
-$panel_fg_color: #fcfcfc;
+$panel_bg_color: #212936;
+$panel_fg_color: #f7f7f7;
 
 //insensitive state derived colors
 $insensitive_fg_color: mix($fg_color, $bg_color, 50%);
