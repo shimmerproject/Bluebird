@@ -462,6 +462,7 @@ button {
       // it won't fade out when the pointer leave the button allocation area. To make the transition more evident
       // in this case the duration is increased.
       transition: none;
+      padding: 4px 3px;
 
       &:hover {
         transition: $button_transition;
@@ -2174,12 +2175,12 @@ notebook {
     tab {
       min-height: 20px;
       min-width: 24px;
-      padding: 3px 12px;
+      padding: 2px 10px;
 
       outline-offset: -5px;
 
       color: $insensitive_fg_color;
-      background-color: $bg_color;
+      background-image: linear-gradient(to bottom, shade($bg_color, 1.06), shade($bg_color, 0.98));
 
       border-width: 1px;         // for reorderable tabs
       border-radius: 3px;
@@ -2206,14 +2207,15 @@ notebook {
 
       &:checked {
         color: $fg_color;
-        background-color: shade($bg_color, 1.05);
+        background-color: shade($bg_color, 1.09);
+        background-image: none;
         border-width: 1px 1px 0 1px;
         &:backdrop {
           background-color: $bg_color;
         }
         &.reorderable-page {
           border-color: transparentize($borders_color, 0.5);
-          background-color: shade($bg_color, 1.05);
+          background-color: shade($bg_color, 1.09);
         }
       }
 
@@ -2260,12 +2262,12 @@ notebook {
           margin-left: 2px;
           margin-right: 2px;
         }
-        &:first-child { margin-left: -3px; }
-        &:last-child { margin-right: -3px; }
+        &:first-child { margin-left: -2px; }
+        &:last-child { margin-right: -2px; }
 
         tab {
-          margin-left: 2px;
-          margin-right: 2px;
+          margin-left: 1px;
+          margin-right: 0px;
         }
       }
     }
@@ -2313,14 +2315,15 @@ notebook {
   // doesn't exist, so we define the tab margins, the background and backdrop colors here:
 
   > header {
-    margin-left: 6px;
+    margin-left: 2px;
   }
 
   > stack:not(:only-child) { // the :not(:only-child) is for "hidden" notebooks
-    background-color: shade($bg_color, 1.05);
+    background-color: shade($bg_color, 1.09);
     border-width: 1px;
     border-color: shade($bg_color, 0.9);
     border-style: solid;
+    border-radius: 2px;
     &:backdrop { background-color: $backdrop_bg_color; }
   }
 }

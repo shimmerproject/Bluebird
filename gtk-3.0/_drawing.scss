@@ -203,7 +203,7 @@
     border-right-color: shade($bg_color, 0.72);
     border-left-color: shade($bg_color, 0.72);
     border-bottom-color: shade($bg_color, 0.7);
-    @if $variant == 'light' { background-image: linear-gradient(to bottom, shade(shade($c, 1.02), 1.05), shade(shade($c, 1.02), 0.97)); }
+    @if $variant == 'light' { background-image: linear-gradient(to bottom, shade(shade($c, 1.02), 1.09), shade(shade($c, 1.04), 0.95)); }
     @else { background-image: linear-gradient(to bottom, darken($c, 2%), darken($c, 4%) 60%, darken($c, 6%)); }
     @include _shadows(inset 0 1px $_hilight_color, $_button_edge);
   }
@@ -294,7 +294,8 @@
 
     border-color: if($c!=$bg_color, _border_color($c),
                                     $insensitive_borders_color);
-    background-color: $_bg;
+    @if $variant == 'light' { background-image: linear-gradient(to bottom, shade(shade($c, 1.02), 1.05), shade(shade($c, 1.04), 0.95)); }
+    @else { background-color: $_bg; }
     text-shadow: none;
     -gtk-icon-shadow: none;
     // white with 0 alpha to avoid an ugly transition, since no color means
