@@ -2046,7 +2046,7 @@ notebook {
     > header { margin-left: 0; }
 
     > stack:not(:only-child) { // the :not(:only-child) is for "hidden" notebooks
-      border: 1px solid shade($bg_color, 0.9);
+      border: 1px solid shade($bg_color, 0.8);
     }
   }
 
@@ -2065,7 +2065,6 @@ notebook {
       > stack { border-top-style: none; }
       > tabs > tab {
         border-radius: 3px 3px 0 0;
-        border: 1px solid shade($bg_color, 0.9);
 
         &:backdrop { box-shadow: none; }
 
@@ -2184,7 +2183,7 @@ notebook {
 
       border-width: 1px;         // for reorderable tabs
       border-radius: 3px;
-      border-color: shade($bg_color, 0.9); //
+      border-color: shade($bg_color, 0.9);
       border-style: solid;
 
       &:hover {
@@ -2210,6 +2209,7 @@ notebook {
         background-color: shade($bg_color, 1.09);
         background-image: none;
         border-width: 1px 1px 0 1px;
+        border-color: shade($bg_color, 0.8);
         &:backdrop {
           background-color: $bg_color;
         }
@@ -2252,6 +2252,11 @@ notebook {
         }
       }
     }
+
+    &.top tab { border-bottom-color: shade($bg_color, 0.8); }
+    &.left tab { border-right-color: shade($bg_color, 0.8); }
+    &.right tab { border-left-color: shade($bg_color, 0.8); }
+    &.bottom tab { border-top-color: shade($bg_color, 0.8); }
 
     &.top,
     &.bottom {
