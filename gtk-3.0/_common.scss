@@ -462,11 +462,11 @@ button {
       // it won't fade out when the pointer leave the button allocation area. To make the transition more evident
       // in this case the duration is increased.
       transition: none;
-      padding: 4px 3px;
+      padding: 5px 6px;
 
       &:hover {
         transition: $button_transition;
-        transition-duration: 500ms;
+        transition-duration: 200ms;
 
         &:active { transition: $button_transition; }
       }
@@ -2263,7 +2263,7 @@ notebook {
           margin-right: 2px;
         }
         &:first-child { margin-left: -2px; }
-        &:last-child { margin-right: -2px; }
+        &:last-child { margin-right: -1px; }
 
         tab {
           margin-left: 1px;
@@ -2281,12 +2281,12 @@ notebook {
           margin-top: 2px;
           margin-bottom: 2px;
         }
-        &:first-child { margin-top: -3px; }
-        &:last-child { margin-bottom: -3px; }
+        &:first-child { margin-top: -2px; }
+        &:last-child { margin-bottom: -1px; }
 
         tab {
-          margin-top: 2px;
-          margin-bottom: 2px;
+          margin-top: 1px;
+          margin-bottom: 0px;
         }
       }
     }
