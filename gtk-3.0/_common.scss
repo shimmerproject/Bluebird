@@ -2047,6 +2047,7 @@ notebook {
 
     > stack:not(:only-child) { // the :not(:only-child) is for "hidden" notebooks
       border: 1px solid shade($bg_color, 0.8);
+      border-radius: 2px;
     }
   }
 
@@ -2328,7 +2329,6 @@ notebook {
     border-width: 1px;
     border-color: shade($bg_color, 0.9);
     border-style: solid;
-    border-radius: 2px;
     &:backdrop { background-color: $backdrop_bg_color; }
   }
 }

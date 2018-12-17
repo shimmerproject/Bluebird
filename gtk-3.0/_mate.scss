@@ -81,9 +81,9 @@ MatePanelAppletFrameDBus {
     border-color: transparent;
 }
 .multiload-applet > box.horizontal > box.vertical > frame {
-    box-shadow: inset  0px  1px shade ($panel_bg_color, 1.2),
-                inset  1px  0px shade ($panel_bg_color, 1.2),
-                inset -1px  0px shade ($panel_bg_color, 1.2),
-                inset  0px -1px shade ($panel_bg_color, 1.2);
+    box-shadow: inset  0px  1px shade($panel_bg_color, 1.2),
+                inset  1px  0px shade($panel_bg_color, 1.2),
+                inset -1px  0px shade($panel_bg_color, 1.2),
+                inset  0px -1px shade($panel_bg_color, 1.2);
 }
 

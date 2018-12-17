@@ -219,7 +219,7 @@
       @if lightness($c)>80% {
         background-image: linear-gradient(to bottom,
                                           shade(shade($selected_bg_color, 1.43), 1.1),
-										  shade(shade($selected_bg_color, 1.43), 0.95)); }
+                                          shade(shade($selected_bg_color, 1.43), 0.95)); }
       @else { background-image: linear-gradient(to bottom, shade($c, 1.18), shade($c, 1.05)); }
       @include _shadows(inset 0 1px _button_hilight_color(lighten($c, 6%)), $_button_edge);
     }
