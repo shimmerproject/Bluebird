@@ -203,7 +203,7 @@
     border-right-color: shade($bg_color, 0.72);
     border-left-color: shade($bg_color, 0.72);
     border-bottom-color: shade($bg_color, 0.7);
-    @if $variant == 'light' { background-image: linear-gradient(to bottom, shade(shade($c, 1.02), 1.09), shade(shade($c, 1.04), 0.95)); }
+    @if $variant == 'light' { background-image: linear-gradient(to bottom, shade(shade($c, 1.03), 1.09), shade(shade($c, 1.03), 0.95)); }
     @else { background-image: linear-gradient(to bottom, darken($c, 2%), darken($c, 4%) 60%, darken($c, 6%)); }
     @include _shadows(inset 0 1px $_hilight_color, $_button_edge);
   }
@@ -216,7 +216,11 @@
     outline-color: transparentize($tc, 0.7);
     border-color: if($c!=$bg_color, _border_color($c), $borders_color);
     @if $variant == 'light' {
-      background-image: linear-gradient(to bottom, shade($c, 1.15), shade($c, 1.07));
+      @if lightness($c)>80% {
+        background-image: linear-gradient(to bottom,
+                                          shade(shade($selected_bg_color, 1.43), 1.1),
+                                          shade(shade($selected_bg_color, 1.43), 0.95)); }
+      @else { background-image: linear-gradient(to bottom, shade($c, 1.18), shade($c, 1.05)); }
       @include _shadows(inset 0 1px _button_hilight_color(lighten($c, 6%)), $_button_edge);
     }
     @else {

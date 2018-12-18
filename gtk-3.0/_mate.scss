@@ -1,0 +1,89 @@
+/******************************
+ * Mate panel, menubar applet *
+ ******************************/
+.mate-panel-menu-bar, .mate-panel-menu-bar menubar {
+  background-color: $panel_bg_color;
+  background-image: none;
+  color: $panel_fg_color;
+  text-shadow: 1px 1px rgba(0,0,0, 0.8);
+
+  > menuitem {
+    color: $panel_fg_color;
+    text-shadow: 1px 1px rgba(0,0,0, 0.8);
+  }
+}
+
+// the above also changes text color for panel context menus, undo that
+.mate-panel-menu-bar menuitem {
+  color: $text_color;
+  text-shadow: none;
+
+  &:hover {
+    background-color: $mb_selected_bg_color;
+  }
+}
+
+// grip left of window list and notification area
+MatePanelAppletFrameDBus {
+  background-image: -gtk-scaled(url("assets/pane-separator-grip-horz.png"));
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: 3px;
+}
+
+
+.mate-panel-menu-bar button {
+  color: $panel_fg_color;
+  text-shadow: 1px 1px rgba(0,0,0, 0.8);
+
+  &:hover {
+    box-shadow: none;
+    border-color: shade(lighten($panel_bg_color, 10%), 1.2);
+    background-image: linear-gradient(to bottom,
+                                      shade(shade($panel_bg_color, 2), 0.7),
+                                      shade($panel_bg_color, 1.2));
+  }
+}
+
+.mate-panel-menu-bar #tasklist-button {
+  &:active, &:checked {
+    border-color: shade($panel_bg_color, 2);
+    background-image: linear-gradient(to top,
+                                      shade(shade($panel_bg_color, 2), 0.8),
+                                      shade($panel_bg_color, 1.2));
+  }
+}
+.mate-panel-menu-bar #tasklist-button:checked:hover {
+      border-color: shade(lighten($panel_bg_color, 10%), 1.6);
+}
+
+.mate-panel-menu-bar button:not(#tasklist-button) {
+  &:active, &:checked {
+    outline-color: transparentize($panel_fg_color, 0.5);
+    border-color: darken(#393f3f, 12%); // $borders_color dark
+    background-image: linear-gradient(to bottom, darken(#393f3f, 8%), darken(#393f3f, 3%));
+  }
+}
+
+.mate-panel-menu-bar PanelSeparator {
+  color: shade(shade($panel_bg_color, 0.7), 2.6);
+}
+
+.mate-panel-menu-bar #showdesktop-button {
+  box-shadow: none;
+  background-image: none;
+  border-color: transparent;
+  background-color: transparent;
+}
+
+/* system-monitor-applet */
+.multiload-applet > box.horizontal > box.vertical > frame > border {
+    border-color: transparent;
+}
+.multiload-applet > box.horizontal > box.vertical > frame {
+    box-shadow: inset  0px  1px shade($panel_bg_color, 1.2),
+                inset  1px  0px shade($panel_bg_color, 1.2),
+                inset -1px  0px shade($panel_bg_color, 1.2),
+                inset  0px -1px shade($panel_bg_color, 1.2);
+}
+

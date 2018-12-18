@@ -462,11 +462,11 @@ button {
       // it won't fade out when the pointer leave the button allocation area. To make the transition more evident
       // in this case the duration is increased.
       transition: none;
-      padding: 4px 3px;
+      padding: 5px 6px;
 
       &:hover {
         transition: $button_transition;
-        transition-duration: 500ms;
+        transition-duration: 200ms;
 
         &:active { transition: $button_transition; }
       }
@@ -2046,7 +2046,8 @@ notebook {
     > header { margin-left: 0; }
 
     > stack:not(:only-child) { // the :not(:only-child) is for "hidden" notebooks
-      border: 1px solid shade($bg_color, 0.9);
+      border: 1px solid shade($bg_color, 0.8);
+      border-radius: 2px;
     }
   }
 
@@ -2065,7 +2066,6 @@ notebook {
       > stack { border-top-style: none; }
       > tabs > tab {
         border-radius: 3px 3px 0 0;
-        border: 1px solid shade($bg_color, 0.9);
 
         &:backdrop { box-shadow: none; }
 
@@ -2184,7 +2184,7 @@ notebook {
 
       border-width: 1px;         // for reorderable tabs
       border-radius: 3px;
-      border-color: shade($bg_color, 0.9); //
+      border-color: shade($bg_color, 0.9);
       border-style: solid;
 
       &:hover {
@@ -2210,6 +2210,7 @@ notebook {
         background-color: shade($bg_color, 1.09);
         background-image: none;
         border-width: 1px 1px 0 1px;
+        border-color: shade($bg_color, 0.8);
         &:backdrop {
           background-color: $bg_color;
         }
@@ -2253,6 +2254,11 @@ notebook {
       }
     }
 
+    &.top tab { border-bottom-color: shade($bg_color, 0.8); }
+    &.left tab { border-right-color: shade($bg_color, 0.8); }
+    &.right tab { border-left-color: shade($bg_color, 0.8); }
+    &.bottom tab { border-top-color: shade($bg_color, 0.8); }
+
     &.top,
     &.bottom {
       tabs {
@@ -2263,7 +2269,7 @@ notebook {
           margin-right: 2px;
         }
         &:first-child { margin-left: -2px; }
-        &:last-child { margin-right: -2px; }
+        &:last-child { margin-right: -1px; }
 
         tab {
           margin-left: 1px;
@@ -2281,12 +2287,12 @@ notebook {
           margin-top: 2px;
           margin-bottom: 2px;
         }
-        &:first-child { margin-top: -3px; }
-        &:last-child { margin-bottom: -3px; }
+        &:first-child { margin-top: -2px; }
+        &:last-child { margin-bottom: -1px; }
 
         tab {
-          margin-top: 2px;
-          margin-bottom: 2px;
+          margin-top: 1px;
+          margin-bottom: 0px;
         }
       }
     }
@@ -2323,7 +2329,6 @@ notebook {
     border-width: 1px;
     border-color: shade($bg_color, 0.9);
     border-style: solid;
-    border-radius: 2px;
     &:backdrop { background-color: $backdrop_bg_color; }
   }
 }
